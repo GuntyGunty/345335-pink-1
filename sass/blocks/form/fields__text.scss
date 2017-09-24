@@ -1,0 +1,379 @@
+.fields-text {
+  width: $mobile-width;
+  flex-grow: 1;
+}
+
+.fields-text__items {
+  display: flex;
+  flex-direction: column;
+  max-width: $mobile-width;
+  margin: 0 0 5px;
+  padding: 0 20px;
+  border-width: 0;
+  box-sizing: border-box;
+
+  &--contacts {
+    margin: 0 0 40px;
+  }
+}
+
+.fields-text__container {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+.fields-text__item {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+
+.fields-text__title {
+  margin: 16px 22px 4px 22px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $color-red;
+}
+
+.fields-text__item:nth-child(3) .fields-text__title {
+  margin: 16px 22px 5px 22px;
+}
+
+.fields-text__legend {
+  text-align: center;
+  margin: 0 20px 11px;
+  text-align: center;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-red;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.fields-text__input {
+  width: 280px;
+  padding: 16px 20px 14px 21px;
+  outline: 0;
+  box-sizing: border-box;
+  font-size: $font-size__title;
+  line-height: 30px;
+  border: 2px solid $color-gray-3;
+  letter-spacing: 0.4px;
+
+  &:-ms-input-placeholder {
+    font-size: $font-size__title;
+    font-family: "Open Sans";
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-black;
+  }
+
+  &::-webkit-input-placeholder {
+    font-size: $font-size__title;
+    font-family: "Open Sans";
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-black;
+  }
+
+  &::-moz-placeholder {
+    font-size: $font-size__title;
+    font-family: "Open Sans";
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-black;
+  }
+
+  &:-moz-placeholder {
+    font-size: $font-size__title;
+    font-family: "Open Sans";
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-black;
+  }
+
+  &:hover {
+    border-color: $color-black;
+  }
+
+  &:focus {
+    border-color: $color-red;
+  }
+}
+
+.fields-text__icon {
+  display: none;
+  height: 64px;
+  min-width: 62px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  background-color: $color-gray-3;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--phone {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+  }
+}
+
+.fields-text__span {
+  padding: 10px 0 0 20px;
+  font-size: 13px;
+  color: red;
+}
+
+.fields-text__textarea {
+  width: 280px;
+  min-height: 200px;
+  padding: 15px 15px 15px 19px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  outline: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  resize: none;
+  box-sizing: border-box;
+  font-size: $font-size__title;
+  line-height: 30px;
+  border: 2px solid $color-gray-3;
+
+  &:-ms-input-placeholder {
+    color: $color-black;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color-black;
+  }
+
+  &::-moz-placeholder {
+    color: $color-black;
+  }
+
+  &:-moz-placeholder {
+    color: $color-black;
+  }
+}
+
+
+@media (min-width: $tablet-widths) {
+  .fields-text {
+    width: 620px;
+  }
+
+  .fields-text__items {
+    align-items: center;
+    max-width: 620px;
+    margin: 0;
+    padding: 0;
+
+    &--contacts {
+      border: 2px solid $color-gray-3;
+      padding-top: 38px;
+      padding-bottom: 15px;
+    }
+
+    &--review {
+      border: 2px solid $color-gray-3;
+      padding-top: 37px;
+      padding-left: 2px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .fields-text__legend {
+    margin: 0;
+    padding: 0 30px;
+
+    &--hidden {
+      display: block;
+    }
+  }
+
+  .fields-text__container {
+    width: 616px;
+  }
+
+  .fields-text__item {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 620px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 51px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &--contacts {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0 0 18px 59px; /* ? */
+    }
+  }
+
+  .fields-text__icon {
+    display: none;
+    height: 64px;
+    min-width: 62px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    background-color: $color-gray-3;
+    background-repeat: no-repeat;
+    background-position: center;
+    &--phone {
+      background-image: url("../img/icon-phone.svg");
+      background-position-x: 19px;
+    }
+
+    &--email {
+      background-image: url("../img/icon-mail.svg");
+      background-position-x: 19px;
+    }
+  }
+
+  .fields-text__title {
+    margin: 8px 19px 5px 0;
+
+    &--contacts {
+      order: 3;
+      margin: 10px 18px;
+    }
+  }
+  .fields-text__item:nth-child(3)  .fields-text__title {
+    margin: 7px 19px 5px 0;
+  }
+  .fields-text__input {
+    width: auto;
+    flex-grow: 1;
+
+    &--contacts {
+      width: 438px;
+      order: 1;
+      flex-grow: 0;
+    }
+  }
+
+  .fields-text__icon {
+    display: inline-block;
+    order: 2;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fields-text__span {
+    padding: 10px 0 0 20px;
+    font-size: 13px;
+  }
+
+  .fields-text__textarea {
+    width: 500px;
+    min-height: 194px;
+    padding: 14px 17px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (min-width: $desktop-widths) {
+  .fields-text {
+    align-items: flex-end;
+    max-width: 940px;
+    padding: 0;
+
+    &:first-child {
+      align-items: center;
+      width: 470px;
+    }
+  }
+
+  .fields-text__items {
+    width: 470px;
+    margin: 0;
+    padding-top: 18px;
+    padding-right: 37px;
+
+    &--review {
+      width: 930px;
+      max-width: 930px;
+      padding: 27px 0 45px;
+    }
+  }
+
+  .fields-text__items--contacts {
+    width: 930px;
+    max-width: 936px;
+    padding: 28px 57px 13px;
+    margin: 0;
+  }
+
+  .fields-text__legend {
+    margin: 0;
+    padding: 0 30px;
+
+    &--hidden {
+      display: block;
+    }
+  }
+
+  .fields-text__container {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 820px;
+  }
+
+  .fields-text__item {
+    width: 435px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 52px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &--contacts {
+      width: 380px;
+      padding-bottom: 0;
+    }
+
+    &--review {
+      width: 940px;
+    }
+  }
+
+  .fields-text__title--contacts {
+    margin: 8px 18px 0;
+  }
+
+
+  .fields-text__input--contacts {
+    width: 315px;
+  }
+
+  .fields-text__textarea {
+    width: 820px;
+    min-height: 128px;
+  }
+}

@@ -1,0 +1,77 @@
+.field-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+.field-action__btn {
+  padding: 17px 49px 17px 47px;
+  border-radius: 2px;
+  font-size: $font-size__title;
+  font-weight: 600;
+  border-radius: 5px;
+  line-height: $font-size__text--big;
+  @include reset-button-style;
+  text-transform: uppercase;
+  line-height: $font-size__text--big;
+  background-color: $color-green;
+  color: $color-white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-green-2;
+  }
+
+  &:active {
+    color: $color-green-3;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-gray-3;
+  }
+}
+
+.field-action__text {
+  margin: 40px 0 20px;
+  text-transform: uppercase;
+}
+
+.field-action__index {
+  color: $color-red;
+}
+
+.field-action__hidden {
+  display: none;
+}
+
+
+@media (min-width: $tablet-widths) {
+  .field-action {
+    flex-direction: row;
+    width: 620px;
+  }
+
+  .field-action__btn {
+    width: 300px;
+    margin: 0;
+  }
+
+  .field-action__text {
+    margin: 0;
+  }
+}
+
+
+@media (min-width: $desktop-widths) {
+  .field-action {
+    width: $desktop-widths;
+  }
+
+  .field-action__hidden {
+    display: inline-block;
+  }
+}

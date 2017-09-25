@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size:   $font-size__text--more;
+    font-weight: 400;
+    color: $color-background-gray;
+    background-color: $color-white;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+  }

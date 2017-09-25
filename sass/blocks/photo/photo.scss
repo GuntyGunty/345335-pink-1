@@ -1,0 +1,248 @@
+.photo__inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: $mobile-width;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.photo {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 280px;
+  box-sizing: border-box;
+  &--wide {
+    width: $mobile-width;
+    margin: 0 auto;
+  }
+}
+
+.photo__img,
+.photo__link {
+  width: 280px;
+  height: 180px;
+}
+
+.photo__img--wide,
+.photo__link--wide {
+  width: $mobile-width;
+  height: 137px;
+}
+
+.photo__label-block {
+  position: absolute;
+  width: 140px;
+  padding: 5px 15px;
+  margin: 0;
+  top: 0;
+  right: 20px;
+  background-color: $color-red;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.photo__label-text {
+  text-align: center;
+  margin: 0;
+  font-size: $font-size__text--small;
+  font-weight: 700;
+  line-height: 24px;
+  color: $color-white;
+  text-transform: uppercase;
+}
+
+.photo__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 280px;
+  padding: 18px 22px 20px 18px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  flex-grow: 1;
+  background-color: $color-white-gray;
+  &--wide {
+    max-width: $mobile-width;
+    margin: 0 20px;
+    padding: 17px 22px 20px 18px;
+  }
+}
+
+.photo__name {
+  margin: 0;
+  font-weight: 700;
+  line-height: 24px;
+  font-style: normal;
+}
+.photo__name-text {
+  @include reset-text-style;
+}
+.photo__time {
+  font-weight: 100;
+  font-size: 14px;
+  margin-left: -1px;
+}
+
+.photo__text {
+  max-width: 246px;
+  margin: 0 0 10px;
+  line-height: 24px;
+  color: $color-gray-font;
+}
+
+.photo__like-block {
+  display: flex;
+  align-items: center;
+  width: 240px;
+}
+
+.photo__like {
+  width: 17px;
+  height: 17px;
+  padding-top: 0;
+  border: none;
+  margin-left: -2px;
+  background-color: transparent;
+  background-position: center;
+  background-image: url("../img/icon-heart.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.photo__count {
+  margin-left: 16px;
+  font-size: $font-size__text--small;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $color-red;
+}
+
+@media (min-width: $tablet-widths) {
+  .photo__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 660px;
+    padding: 0 20px;
+    margin-top: 50px;
+  }
+  .gallery__item {
+    margin-bottom: 20px;
+  }
+  .photo {
+    width: 300px;
+    padding: 0;
+    &--wide {
+      width: 660px;
+      max-width: 660px;
+    }
+  }
+  .photo__img,
+  .photo__link {
+    width: 300px;
+    height: 300px;
+    &--wide {
+      width: 660px;
+      height: 508px;
+    }
+  }
+  .photo__label-block {
+    top: 57px;
+    right: 20px;
+  }
+  .photo__wrapper {
+    width: 300px;
+    max-width: 300px;
+    min-height: 155px;
+    padding: 25px 27px 20px;
+    margin-left: 0;
+    margin-right: 0;
+    &--wide {
+      width: 620px;
+      max-width: 620px;
+      margin: 0 20px;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      min-height: 120px;
+      padding: 23px 27px 23px;
+    }
+  }
+  .photo__name--wide {
+    order: 2;
+  }
+  .photo__text {
+    margin-bottom: auto;
+    &--wide {
+      width: 620px;
+      max-width: 620px;
+      order: 3;
+    }
+  }
+  .photo__like-block {
+    justify-content: space-between;
+    width: 243px;
+    &--wide {
+      justify-content: center;
+      order: 1;
+      width: auto;
+    }
+  }
+  .photo__like {
+    order: 2;
+    margin-left: 14.5px;
+  }
+  .photo__count {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $desktop-widths) {
+  .photo__inner {
+    max-width: 960px;
+    padding: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .photo {
+    width: 300px;
+    &--wide {
+      min-width: 100%;
+    }
+  }
+  .photo__label-block {
+    top: 55px;
+    right: 130px;
+  }
+  .photo__img,
+  .photo__link {
+    height: 400px;
+    &--wide {
+      min-width: 100%;
+      max-width: 1200px;
+      height: 506px;
+    }
+  }
+  .photo__label-text {
+    top: 55px;
+    right: 10px;
+  }
+  .photo__wrapper {
+    padding: 24px 27px 22px;
+    &--wide {
+      width: 940px;
+      max-width: 940px;
+      min-height: 95px;
+      padding: 25px 30px 22px 27px;
+      margin: 0 auto;
+    }
+  }
+  .photo__text--wide {
+    width: 885px;
+    max-width: 885px;
+  }
+}

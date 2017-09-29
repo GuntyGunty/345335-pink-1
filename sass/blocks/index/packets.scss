@@ -19,7 +19,10 @@
 
 .packets {
   max-width: $mobile-width;
-  padding: 85px 0 48px;
+  padding-top: 85px;
+  padding-right: 0;
+  padding-bottom: 48px;
+  padding-left: 0;
   margin: 0 auto;
 }
 
@@ -43,7 +46,10 @@
 .packets__head {
   position: relative;
   width: 280px;
-  padding: 17px 18px 20px 18px;
+  padding-top: 17px;
+  padding-right: 18px;
+  padding-bottom: 20px;
+  padding-left: 18px;
   background-color: $color-background-gray;
   color: $color-white;
   font-size: $font-size__title;
@@ -96,7 +102,10 @@
 .packets__excluded {
   position: relative;
   width: 280px;
-  padding: 12px 5px 15px 22px;
+  padding-top: 12px;
+  padding-right: 5px;
+  padding-bottom: 15px;
+  padding-left: 22px;
   line-height: 32px;
   text-transform: uppercase;
   background-color: $color-white;
@@ -125,6 +134,7 @@
     padding: 0;
     margin: 0 auto;
   }
+
   .packets__wrapper {
     position: relative;
     background-color: $color-white-gray;
@@ -133,34 +143,40 @@
     &:before {
       content: "";
       position: absolute;
-      top: -3px;
-      height: 100px;
+      top: -4px;
       background-color: $color-white-gray;
       background-image: url(../img/bg-triangle-white.svg);
       background-repeat: no-repeat;
-      background-size: 100%;
       background-position: center 0;
       width: 100%;
     }
   }
+
   .packets__inner {
     max-width: 660px;
     margin-top: 0;
-    padding: 82px 20px 29px 17px;
+    padding-top: 82px;
+    padding-right: 20px;
+    padding-bottom: 28px;
+    padding-left: 17px;
     overflow: visible;
   }
+
   .packets__table {
     max-width: 626px;
     margin-left: 0;
-    padding-top: 2px;
     box-sizing: border-box;
     border: 2px solid $color-white-gray;
   }
+
   .packets__head {
-    width: 156px;
-    padding: 12px 0 7px 0;
+    width: 140px;
+    padding-top: 18px;
+    padding-right: 0;
+    padding-bottom: 9px;
+    padding-left: 0;
     font-size: 16px;
-    line-height: 28px;
+    line-height: 1.2em;
     font-weight: 700;
     box-sizing: border-box;
     &--null {
@@ -184,8 +200,8 @@
     &::after {
       position: absolute;
       content: attr(data-description);
-      left: 8px;
-      top: 4px;
+      left: 6px;
+      top: 3px;
       text-transform: uppercase;
       font-size: $font-size__text--more;
       line-height: $font-size__text--big;
@@ -198,18 +214,27 @@
   .packets__USD {
     font-size: $font-size__title;
   }
+
   .packets__filter {
     width: 156px;
-    padding: 1.5px 18px 6px 15px;
+    padding-top: 2px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
     line-height: 38px;
     text-transform: capitalize;
   }
+
   .packets__included,
   .packets__excluded {
     width: 156px;
-    padding: 0 10px 4px;
+    padding-top: 0;
+    padding-right: 50px;
+    padding-bottom: 4px;
+    padding-left: 40px;
     background-position: center;
   }
+
   .packets__option-name {
     font-size: 0;
     padding: 0;
@@ -220,23 +245,54 @@
   .packets {
     max-width: $desktop-widths;
   }
+
   .packets__inner {
     max-width: $desktop-widths;
-    padding: 150px 0 93px 9px;
+    padding-top: 150px;
+    padding-right: 0;
+    padding-bottom: 93px;
+    padding-left: 9px;
   }
+
   .packets__wrapper {
     background-position: center -1px, left;
     background-size: 100%;
 }
+
+.packets__wrapper {
+  position: relative;
+  background-color: $color-white-gray;
+  width: 100%;
+  max-height: 630px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    height: 80px;
+    background-color: $color-white-gray;
+    background-image: url(../img/bg-triangle-white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 0;
+    transform: translateY(-4px);
+    width: 100%;
+  }
+}
+
   .packets__table {
     max-width: 945px;
     padding: 0;
+    margin-top: -21px;
     box-sizing: border-box;
     border: 2px solid $color-white-gray;
   }
+
   .packets__head {
     width: 242px;
-    padding: 16px 40px 20px;
+    padding-top: 16px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
     line-height: 30px;
     font-size: $font-size__title;
   }
@@ -267,18 +323,27 @@
       z-index: 4;
     }
   }
+
   .packets__USD {
     font-size: $font-size__title--big;
   }
+
   .packets__filter {
     width: 230px;
-    padding: 8px 18px 10px 20px;
+    padding-top: 8px;
+    padding-right: 18px;
+    padding-bottom: 10px;
+    padding-left: 20px;
     font-size: $font-size__title;
     line-height: 40px;
   }
+
   .packets__included,
   .packets__excluded {
     width: 232px;
-    padding: 5px 90px;
+    padding-top: 5px;
+    padding-right: 90px;
+    padding-bottom: 5px;
+    padding-left: 90px;
   }
 }

@@ -23,9 +23,11 @@
     background-image: url(../img/iphone-hand-desktop@2x.png), url(../img/bg-back-desktop@2x.jpg);
   }
 }
+
 .banner__photo-page {
   min-height: 239px;
 }
+
 .banner__inner {
   padding-top: 466px;
   &--photo {
@@ -74,6 +76,7 @@
 .banner__form-page {
   min-height: 239px;
 }
+
 .banner__form-page,
 .banner__photo-page {
   background-image: none, url(../img/bg-back-mobile@1x.jpg);
@@ -98,20 +101,28 @@
     background-position: center top;
     min-height: 440px;
   }
+
+  .banner__form-page {
+    background-size: 1189px 729px;
+  }
+
   .banner__photo-page {
     padding-top: 0;
     background-position: center top;
     background-size: 181%;
     min-height: 468px;
   }
+
   .banner__photo-page {
     padding-top: 55px;
     min-height: 383px;
   }
+
   .banner__form-page {
     padding-top: 0;
     min-height: 439px;
   }
+
   .banner__index {
     padding-top: 189px;
     background-image: url(../img/iphone-hand-tablet@1x.png), url(../img/bg-back-tablet@1x.jpg);
@@ -121,7 +132,8 @@
   }
 
   .banner__inner {
-    padding: 0 2px 0 0;
+    padding-top: 0;
+    padding-right: 2px;
     &--photo {
       width: auto;
     }
@@ -144,9 +156,11 @@
       padding-bottom: 30px;
     }
   }
+
   .banner__title--photo {
     padding-bottom: 18px;
   }
+
   .banner-title--form {
     width: 500px;
     padding-top: 95px;
@@ -157,27 +171,40 @@
   // }
 }
   @media (min-width: $desktop-widths) {
-    .banner__index {
-      background-image: url(../img/iphone-hand-desktop@1x.png), url(../img/bg-back-desktop@1x.jpg);
-      min-height: auto;
-      padding-top: 134px;
-    }
     .banner {
       background-size: 1050px, cover;
       background-position: bottom right 4px, center top;
     }
-    .banner__inner {
-      padding: 20px 360px 0 0;
+
+    .banner__index {
+      background-image: url(../img/iphone-hand-desktop@1x.png), url(../img/bg-back-desktop@1x.jpg);
+      min-height: auto;
+      background-position: bottom right -114px, center top;
+      padding-top: 134px;
     }
+
+    .banner__inner {
+      padding-top: 20px;
+      padding-right: 360px;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+
+    .banner__inner--photo {
+      padding-right: 0;
+      padding-top: 35px;
+    }
+
     .banner__form-page,
     .banner__photo-page {
-      padding-top: 55px;
+      padding-top: 53px;
+      background-size: auto;
+      background-position: bottom right 4px, center top;
       background-image: none, url(../img/bg-back-desktop@1x.jpg);
-      min-height: 340px;
+      min-height: 339px;
     }
-    .photos-page__page-footer {
-      padding-top: 98px;
-    }
+
+
     .banner__title {
       width: 800px;
       font-size: $font-size__title--hugest;
@@ -186,5 +213,9 @@
       &--photo {
         width: 600px;
       }
+    }
+
+    .banner-title--form {
+      padding-top: 19px;
     }
   }

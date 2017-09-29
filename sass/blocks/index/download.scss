@@ -68,7 +68,10 @@
 }
 
 .download__btn {
-  padding: 16px 35px 16px 35px;
+  padding-top: 16px;
+  padding-right: 35px;
+  padding-bottom: 16px;
+  padding-left: 35px;
   display: block;
   text-decoration: none;
   color: $color-white;
@@ -98,18 +101,22 @@
     background-color: transparent;
     order: 0;
   }
+
   .download__title {
     display: block;
     line-height: 48px;
     margin-bottom: 30px;
   }
+
   .download__text {
     font-size: $font-size__title;
     margin-top: 37px;
   }
+
   .download__title-text {
     line-height: 1.2em;
   }
+
   .download__btn {
     margin-bottom: 45px;
   }
@@ -122,20 +129,30 @@
     padding-top: 64px;
     padding-bottom: 122px;
   }
+
   .download__title {
     font-size: $font-size__title--hugest;
     margin-bottom: 52px;
   }
+
   .download__title-text {
     line-height: 60px;
   }
+
   .download__links {
-    margin-top: 65px;
+    margin-top: 68px;
+    padding-right: 3px;
   }
+
   .download__text {
     margin-top: 55px;
   }
+
   .download__btn {
     padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 23px;
+    padding-right: 26px;
+    font-size: $font-size__title--more;
   }
 }

@@ -20,16 +20,13 @@
   background-color: $color-green;
   color: $color-white;
   cursor: pointer;
-
   &:hover {
     background-color: $color-green-2;
   }
-
   &:active {
     color: $color-green-3;
     outline: none;
   }
-
   &:disabled {
     background-color: $color-gray-3;
   }
@@ -48,7 +45,6 @@
   display: none;
 }
 
-
 @media (min-width: $tablet-widths) {
   .field-action {
     flex-direction: row;
@@ -64,7 +60,6 @@
     margin: 0;
   }
 }
-
 
 @media (min-width: $desktop-widths) {
   .field-action {

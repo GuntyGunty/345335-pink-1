@@ -1,19 +1,20 @@
 "use strict";
 
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var minify = require("gulp-csso");
-var imagemin = require("gulp-imagemin");
-var rename = require("gulp-rename");
-var del = require("del");
-var uglify = require("gulp-uglify");
-var svgstore = require("gulp-svgstore");
-var svgmin = require("gulp-svgmin");
-var server = require("browser-sync").create();
-var run = require("run-sequence");
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const plumber = require("gulp-plumber");
+const postcss = require("gulp-postcss");
+const stylelint = require('gulp-stylelint');
+const autoprefixer = require("autoprefixer");
+const minify = require("gulp-csso");
+const imagemin = require("gulp-imagemin");
+const rename = require("gulp-rename");
+const del = require("del");
+const uglify = require("gulp-uglify");
+const svgstore = require("gulp-svgstore");
+const svgmin = require("gulp-svgmin");
+const server = require("browser-sync").create();
+const run = require("run-sequence");
 
 gulp.task("clean", function () {
   return del("build");
@@ -29,6 +30,17 @@ gulp.task("copy", function() {
     base: "."
   })
   .pipe(gulp.dest("build"));
+});
+
+gulp.task("lint", function() {
+  gulp.src("sass/style.scss")
+  .pipe(stylelint({
+    codeFilename: ("*.stylelintrc"),
+    failAfterError: true,
+    reporters: [
+      {formatter: 'string', console: true}
+    ]
+  }))
 });
 
 gulp.task("style", function() {
@@ -95,6 +107,7 @@ gulp.task("build", function(fn) {
   run(
     "clean",
     "copy",
+    "lint",
     "style",
     "images",
     "symbols",

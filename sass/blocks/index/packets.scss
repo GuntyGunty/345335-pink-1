@@ -3,14 +3,15 @@
   background-color: $color-white-gray;
   width: 100%;
   max-height: 430px;
-  &:before {
+
+  &::before {
     content: "";
     position: absolute;
     top: -40px;
     width: 100%;
     height: 60px;
     background-color: $color-white-gray;
-    background-image: url(../img/bg-triangle-white.svg);
+    background-image: url("../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
     background-size: 110%;
     background-position: center -1px;
@@ -64,13 +65,13 @@
     position: absolute;
     top: 0;
     left: -2px;
-    background-image: url(../img/bg-hit.svg);
+    background-image: url("../img/bg-hit.svg");
     background-repeat: no-repeat;
     color: $color-red-4;
     width: 70px;
     height: 73px;
-    position: absolute;
   }
+
   &::after {
     position: absolute;
     content: attr(data-description);
@@ -114,7 +115,7 @@
 
 .packets__included,
 .packets__excluded {
-  background-image: url(../img/icon-yes.svg);
+  background-image: url("../img/icon-yes.svg");
   background-size: 31px 21px;
   background-position: top 18px right 18px;
   background-repeat: no-repeat;
@@ -123,7 +124,7 @@
 }
 
 .packets__excluded {
-  background-image: url(../img/icon-no.svg);
+  background-image: url("../img/icon-no.svg");
   background-size: 27px 26px;
   background-position: top 13px right 20px;
 }
@@ -140,12 +141,13 @@
     background-color: $color-white-gray;
     width: 100%;
     max-height: 630px;
-    &:before {
+
+    &::before {
       content: "";
       position: absolute;
       top: -4px;
       background-color: $color-white-gray;
-      background-image: url(../img/bg-triangle-white.svg);
+      background-image: url("../img/bg-triangle-white.svg");
       background-repeat: no-repeat;
       background-position: center 0;
       width: 100%;
@@ -179,6 +181,7 @@
     line-height: 1.2em;
     font-weight: 700;
     box-sizing: border-box;
+
     &--null {
       background-color: transparent;
     }
@@ -190,13 +193,13 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url(../img/bg-hit-tablet.svg);
+      background-image: url("../img/bg-hit-tablet.svg");
       background-repeat: no-repeat;
       color: $color-red-4;
       width: 70px;
       height: 80px;
-      position: absolute;
     }
+
     &::after {
       position: absolute;
       content: attr(data-description);
@@ -255,29 +258,27 @@
   }
 
   .packets__wrapper {
+    position: relative;
+    background-color: $color-white-gray;
+    width: 100%;
+    max-height: 630px;
     background-position: center -1px, left;
     background-size: 100%;
-}
 
-.packets__wrapper {
-  position: relative;
-  background-color: $color-white-gray;
-  width: 100%;
-  max-height: 630px;
-  &:before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    height: 80px;
-    background-color: $color-white-gray;
-    background-image: url(../img/bg-triangle-white.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center 0;
-    transform: translateY(-4px);
-    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      height: 80px;
+      background-color: $color-white-gray;
+      background-image: url("../img/bg-triangle-white.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center 0;
+      transform: translateY(-4px);
+      width: 100%;
+    }
   }
-}
 
   .packets__table {
     max-width: 945px;
@@ -303,13 +304,13 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url(../img/bg-hit.svg);
+      background-image: url("../img/bg-hit.svg");
       background-repeat: no-repeat;
       color: $color-red-4;
       width: 72px;
       height: 79px;
-      position: absolute;
     }
+
     &::after {
       position: absolute;
       content: attr(data-description);

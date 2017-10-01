@@ -38,6 +38,7 @@
   margin: 5px 0 0;
   margin-top: 5px;
   box-sizing: border-box;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -58,8 +59,9 @@
   font-size: $font-size__title;
   line-height: 40px;
   font-weight: 400;
+
   &::after {
-    content: "";
+    content: " ";
     position: absolute;
     width: 40px;
     height: 40px;
@@ -81,7 +83,7 @@
 }
 
 .fields-radio__input:checked + .fields-radio__text::before {
-  content: "";
+  content: " ";
   position: absolute;
   width: 15px;
   height: 15px;
@@ -123,6 +125,7 @@
   .fields-radio__text {
     padding-left: 60px;
     line-height: 30px;
+
     &::after {
       top: 10px;
     }
@@ -159,19 +162,13 @@
   }
 
   .fields-radio__text {
-    padding-left: 72px;
-    line-height: 30px;
-    &::after {
-      top: 12px;
-      left: 13px;
-    }
-  }
-
-  .fields-radio__text {
     position: relative;
     display: block;
+    padding-left: 72px;
+    line-height: 30px;
+
     &::after {
-      content: "";
+      content: " ";
       position: absolute;
       width: 40px;
       height: 40px;

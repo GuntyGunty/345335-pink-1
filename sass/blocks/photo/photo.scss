@@ -17,6 +17,7 @@
   flex-direction: column;
   width: 280px;
   box-sizing: border-box;
+
   &--wide {
     width: $mobile-width;
     margin: 0 auto;
@@ -73,6 +74,7 @@
   box-sizing: border-box;
   flex-grow: 1;
   background-color: $color-white-gray;
+
   &--wide {
     max-width: $mobile-width;
     margin-top: 0;
@@ -158,6 +160,7 @@
   .photo {
     width: 300px;
     padding: 0;
+
     &--wide {
       width: 660px;
       max-width: 660px;
@@ -168,6 +171,7 @@
   .photo__link {
     width: 300px;
     height: 300px;
+
     &--wide {
       width: 660px;
       height: 508px;
@@ -188,6 +192,7 @@
     padding-left: 27px;
     margin-left: 0;
     margin-right: 0;
+
     &--wide {
       max-width: 620px;
       flex-direction: row-reverse;
@@ -211,6 +216,7 @@
 
   .photo__text {
     margin-bottom: auto;
+
     &--wide {
       max-width: 620px;
       margin-top: -3px;
@@ -221,6 +227,7 @@
   .photo__like-block {
     justify-content: space-between;
     width: 243px;
+
     &--wide {
       justify-content: center;
       order: 1;
@@ -257,6 +264,7 @@
   .photo {
     width: 300px;
     margin-bottom: 55px;
+
     &--wide {
       min-width: 100%;
     }
@@ -270,6 +278,7 @@
   .photo__img,
   .photo__link {
     height: 400px;
+
     &--wide {
       min-width: 960px;
       height: 506px;
@@ -286,6 +295,7 @@
     padding-right: 27px;
     padding-bottom: 22px;
     padding-left: 27px;
+
     &--wide {
       width: 940px;
       max-width: 940px;

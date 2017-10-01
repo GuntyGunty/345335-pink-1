@@ -9,24 +9,26 @@
 
 .field-action__btn {
   padding: 17px 49px 17px 47px;
-  border-radius: 2px;
   font-size: $font-size__title;
   font-weight: 600;
   border-radius: 5px;
-  line-height: $font-size__text--big;
+
   @include reset-button-style;
   text-transform: uppercase;
   line-height: $font-size__text--big;
   background-color: $color-green;
   color: $color-white;
   cursor: pointer;
+
   &:hover {
     background-color: $color-green-2;
   }
+
   &:active {
     color: $color-green-3;
     outline: none;
   }
+
   &:disabled {
     background-color: $color-gray-3;
   }

@@ -6,6 +6,7 @@
   padding-bottom: 32px;
   padding-left: 0;
   margin-bottom: 17px;
+
   &--photo {
     padding-top: 45px;
     padding-right: 0;
@@ -13,6 +14,7 @@
     padding-left: 0;
     margin-bottom: 12px;
   }
+
   &--form {
     margin-bottom: 0;
     padding-top: 46px;
@@ -26,6 +28,7 @@
   margin: 0;
   font-size: $font-size__title--big;
   font-weight: 100;
+
   &:first-child {
     margin-bottom: 34px;
   }
@@ -36,6 +39,7 @@
   margin: 0 auto;
   font-size: $font-size__text--more;
   line-height: $font-size__text--big;
+
   &--form {
     width: 280px;
   }
@@ -52,6 +56,7 @@
     padding-bottom: 77px;
     padding-left: 0;
     margin-bottom: 0;
+
     &--form {
       padding-top: 91px;
       padding-right: 0;
@@ -63,6 +68,7 @@
   .slogan__title {
     font-size: $font-size__title--huge;
     text-align: center;
+
     &:first-child {
       width: 320px;
       margin: 0 auto;
@@ -83,7 +89,6 @@
 @media (min-width: $desktop-widths) {
   .slogan {
     padding-top: 93px;
-    padding-right: 0;
     padding-bottom: 48px;
     padding-right: 0;
   }
@@ -98,11 +103,13 @@
 
   .slogan__title {
     font-size: $font-size__title--hugest;
+
     &:nth-last-child(1) {
       width: 490px;
       margin: 0 auto;
     }
   }
+
   .slogan__text {
     width: 800px;
     font-size: $font-size__title;

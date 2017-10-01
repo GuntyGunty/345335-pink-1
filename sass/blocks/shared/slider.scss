@@ -4,6 +4,7 @@
 
 .slider__item {
   display: none;
+
   &--active {
     display: block;
   }
@@ -28,6 +29,7 @@
   &:nth-child(1) {
     margin-right: 16px;
   }
+
   &:nth-child(2) {
     margin-right: 18px;
   }
@@ -39,25 +41,31 @@
   border-radius: 50%;
   background-color: $color-gray-5;
   margin-right: 19px;
+
   &:nth-child(1) {
     margin-right: 15px;
   }
+
   &:nth-child(3) {
     margin-right: 0;
   }
-  &:hover {
-    background-color: $color-gray-6;
-  }
-  &:active {
-    background-color: $color-red-4;
-  }
+
   &--active {
     border: 3px solid $color-background-gray;
     background-color: $color-white;
   }
+
   &--active:hover {
     border: 3px solid $color-background-gray;
     background-color: $color-white;
+  }
+
+  &:hover {
+    background-color: $color-gray-6;
+  }
+
+  &:active {
+    background-color: $color-red-4;
   }
 }
 
@@ -75,6 +83,7 @@
   .slider__pagination {
     display: none;
   }
+
   .slider__arrow {
     @include reset-button-style;
     display: block;
@@ -85,9 +94,11 @@
     height: 42px;
     background-color: transparent;
     background-repeat: no-repeat;
+
     &--last {
       right: 15px;
     }
+
     &--next {
       left: 5px;
     }

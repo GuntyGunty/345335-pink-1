@@ -20,7 +20,7 @@
 
   &--wide {
     width: $mobile-width;
-    margin: 0 auto;
+    margin-bottom: 21px;
   }
 }
 
@@ -39,7 +39,7 @@
 .photo__label-block {
   position: absolute;
   width: 140px;
-  padding-top: 5px;
+  padding-top: 6px;
   padding-right: 15px;
   padding-bottom: 5px;
   padding-left: 15px;
@@ -81,7 +81,7 @@
     margin-right: 20px;
     margin-bottom: 0;
     margin-left: 20px;
-    padding-top: 17px;
+    padding-top: 18px;
     padding-right: 22px;
     padding-bottom: 20px;
     padding-left: 18px;
@@ -106,7 +106,7 @@
 
 .photo__text {
   max-width: 246px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   margin-top: 0;
   line-height: 24px;
   color: $color-gray-font;
@@ -153,8 +153,8 @@
     margin-top: 50px;
   }
 
-  .gallery__item {
-    margin-bottom: 20px;
+  .photo__label-block {
+    padding-top: 5px;
   }
 
   .photo {
@@ -192,7 +192,6 @@
     padding-left: 27px;
     margin-left: 0;
     margin-right: 0;
-
     &--wide {
       max-width: 620px;
       flex-direction: row-reverse;
@@ -201,7 +200,7 @@
       min-height: 120px;
       padding-top: 24px;
       padding-right: 27px;
-      padding-bottom: 20px;
+      padding-bottom: 16px;
       padding-left: 27px;
       margin-right: 20px;
       margin-top: 0;
@@ -219,7 +218,7 @@
 
     &--wide {
       max-width: 620px;
-      margin-top: -3px;
+      margin-top: -2px;
       order: 3;
     }
   }
@@ -263,10 +262,15 @@
 
   .photo {
     width: 300px;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 
     &--wide {
       min-width: 100%;
+      margin-bottom: 51px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 52px;
     }
   }
 
@@ -291,7 +295,7 @@
   }
 
   .photo__wrapper {
-    padding-top: 25px;
+    padding-top: 24px;
     padding-right: 27px;
     padding-bottom: 22px;
     padding-left: 27px;
@@ -302,7 +306,7 @@
       min-height: 95px;
       padding-top: 25px;
       padding-right: 30px;
-      padding-bottom: 23px;
+      padding-bottom: 14px;
       padding-left: 27px;
       margin: 0 auto;
     }
@@ -311,6 +315,12 @@
   .photo__text--wide {
     width: 885px;
     max-width: 885px;
+
+        &--wide {
+      max-width: 620px;
+      margin-top: -2px;
+      order: 3;
+    }
   }
 
   .photo__like-block--wide .photo__count {

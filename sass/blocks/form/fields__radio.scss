@@ -59,9 +59,8 @@
   font-size: $font-size__title;
   line-height: 40px;
   font-weight: 400;
-
   &::after {
-    content: " ";
+    content: "";
     position: absolute;
     width: 40px;
     height: 40px;
@@ -83,7 +82,7 @@
 }
 
 .fields-radio__input:checked + .fields-radio__text::before {
-  content: " ";
+  content: "";
   position: absolute;
   width: 15px;
   height: 15px;
@@ -125,7 +124,6 @@
   .fields-radio__text {
     padding-left: 60px;
     line-height: 30px;
-
     &::after {
       top: 10px;
     }
@@ -166,9 +164,8 @@
     display: block;
     padding-left: 72px;
     line-height: 30px;
-
     &::after {
-      content: " ";
+      content: "";
       position: absolute;
       width: 40px;
       height: 40px;

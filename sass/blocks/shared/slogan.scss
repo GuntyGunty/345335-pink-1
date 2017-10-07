@@ -12,7 +12,7 @@
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-    margin-bottom: 12px;
+    margin-bottom: 49px;
   }
 
   &--form {
@@ -28,7 +28,6 @@
   margin: 0;
   font-size: $font-size__title--big;
   font-weight: 100;
-
   &:first-child {
     margin-bottom: 34px;
   }
@@ -89,6 +88,7 @@
 @media (min-width: $desktop-widths) {
   .slogan {
     padding-top: 93px;
+    padding-right: 0;
     padding-bottom: 48px;
     padding-right: 0;
   }
@@ -103,13 +103,11 @@
 
   .slogan__title {
     font-size: $font-size__title--hugest;
-
     &:nth-last-child(1) {
       width: 490px;
       margin: 0 auto;
     }
   }
-
   .slogan__text {
     width: 800px;
     font-size: $font-size__title;

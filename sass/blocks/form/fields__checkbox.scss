@@ -66,9 +66,8 @@
   font-size: $font-size__title;
   line-height: 40px;
   font-weight: 400;
-
   &::after {
-    content: " ";
+    content: "";
     position: absolute;
     width: 40px;
     height: 40px;
@@ -90,7 +89,7 @@
 }
 
 .fields-checkbox__input:checked + .fields-checkbox__text::before {
-  content: " ";
+  content: "";
   position: absolute;
   z-index: 1;
   width: 23px;

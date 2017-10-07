@@ -16,7 +16,6 @@
 
 .presentation__title {
   text-align: center;
-
   @include reset-text-style;
   font-size: $font-size__text--more;
   font-weight: 400;
@@ -46,11 +45,10 @@
 .presentation__list {
   width: 240px;
   margin: 0 auto;
-
   @include reset-list-style;
   padding-top: 20px;
   padding-right: 40px;
-  padding-bottom: 52px;
+  padding-bottom: 16px;
   padding-left: 40px;
 }
 
@@ -69,11 +67,9 @@
   margin-left: 15px;
   vertical-align: middle;
   box-sizing: border-box;
-
   &:nth-child(2) {
     padding-top: 2px;
   }
-
   &:nth-child(3) {
     margin-top: 13px;
     margin-right: 13px;
@@ -82,39 +78,58 @@
   }
 }
 
-.presentation__tool-togler {
+.presentation__tool-bar {
+  position: relative;
   display: none;
   height: 2px;
   -webkit-appearance: none;
-  background: $color-black;
+  background: $color-background-gray;
   cursor: pointer;
-  outline: none;
 
-  &--active {
+  &--main {
     display: block;
-    position: absolute;
-    left: -19px;
-    top: 81px;
+    margin-bottom: 34px;
+    margin-left: 38px;
+    margin-right: 20px;
     width: 240px;
-    outline: none;
+  }
+}
+
+.presentation__tool-togle {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  border: 2px solid $color-red;
+  border-radius: 50%;
+  background: $color-white-gray;
+
+  &--main {
+    top: -6px;
+    left: 193px;
   }
 
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 15px;
-    width: 15px;
-    border: 2px solid $color-red;
-    border-radius: 50%;
-    background: $color-white-gray;
+  &:hover {
+    background: $color-red;
   }
 }
 
 .presentation__tool-img {
+  cursor: pointer;
   fill: $color-gray-13;
 
   &--crop {
     fill: $color-red;
   }
+
+  &:hover {
+    fill: $color-gray-12;
+  }
+}
+
+.presentation__tool-img--crop:hover {
+  fill: $color-red;
+  cursor: default;
 }
 
 .presentation__tool:hover .presentation__tool-img {
@@ -150,6 +165,8 @@
   margin-top: 37px;
   margin-right: 0;
   margin-bottom: 11px;
+  padding-right: 86px;
+  letter-spacing: 0.8px;
   margin-left: 0;
   border-radius: 25px;
 
@@ -169,8 +186,9 @@
   border-radius: 25px;
   padding-top: 16px;
   padding-bottom: 16px;
+  letter-spacing: 0.4px;
   padding-right: 102px;
-  padding-left: 102px;
+  padding-left: 100px;
 
   &:hover {
     border-color: $color-gray-13;
@@ -190,7 +208,7 @@
 
   .presentation__title-container {
     max-width: 660px;
-    padding-top: 46px;
+    padding-top: 45px;
     padding-right: 0;
     padding-bottom: 40px;
     padding-left: 0;
@@ -199,6 +217,10 @@
 
   .presentation__title {
     font-size: $font-size__title;
+  }
+
+  .presentation__title-container {
+    padding-top: 44px;
   }
 
   .presentation__wrapper {
@@ -250,16 +272,73 @@
     border-bottom: none;
   }
 
+  .presentation__tool-bar {
+    display: block;
+    width: 200px;
+
+    &--main {
+      display: none;
+    }
+  }
+
   .presentation__item {
     width: 275px;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 12px;
     margin: 0;
     border-bottom: 1px solid $color-gray-4;
 
+    &:nth-child(1) {
+      padding-top: 6px;
+      padding-bottom: 23px;
+    }
+
+    &:nth-child(2) {
+      padding-top: 24px;
+      padding-bottom: 22px;
+    }
+
     &:nth-child(3) {
+      padding-top: 25px;
+      padding-bottom: 27px;
       margin: 0;
     }
   }
 
+  .presentation__tool-img--crop:hover {
+    fill: $color-gray-12;
+    cursor: pointer;
+  }
+
+  .presentation__tool-togle--main {
+    display: none;
+  }
+
+  .presentation__item:nth-child(1) .presentation__tool-togle {
+    top: -7px;
+    left: 145px;
+  }
+
+  .presentation__item:nth-child(2) .presentation__tool-togle {
+    top: -6px;
+    left: 24px;
+  }
+
+  .presentation__item:nth-child(3) .presentation__tool-togle {
+    top: -6px;
+    left: 95px;
+  }
+
+  .presentation__item-inner  {
+    display: flex;
+    align-items: center;
+  }
+
+  .presentation__btn-container {
+    width: 280px;
+    padding: 0;
+  }
   .presentation__tool {
     display: flex;
     justify-content: space-between;
@@ -288,28 +367,27 @@
   .presentation__tool-img {
     width: 25px;
     height: 25px;
+    margin-right: 48px;
     fill: $color-red;
+
+    &--crop {
+      margin-right: 30px;
+      padding-left: 3px;
+    }
 
     &--fill {
       height: 22px;
+      padding-left: 5px;
+      margin-right: 28px;
       margin-top: 4px;
     }
 
     &--contrast {
       width: 17px;
       height: 17px;
-      margin-left: 5px;
+      margin-right: 32px;
+      margin-left: 10px;
     }
-  }
-
-  .presentation__tool-togler {
-    display: block;
-    position: relative;
-    width: 202px;
-    left: 0;
-    top: 0;
-    padding: 0;
-    margin: 0;
   }
 
   .presentation__btn-submit,
@@ -329,17 +407,19 @@
 
   .presentation__btn-reset {
     padding-right: 93px;
-    padding-left: 93px;
+    padding-left: 87px;
+    letter-spacing: 0.5px;
   }
 
   .presentation__btn-submit {
     margin-top: auto;
+    padding-right: 84px;
+    letter-spacing: 0.9px;
+    padding-left: 74px;
   }
 
   .presentation__btn-container {
     margin-left: 15px;
-    width: 280px;
-    padding: 0;
   }
 }
 
@@ -351,7 +431,7 @@
   }
 
   .presentation__title-container {
-    padding-top: 4px;
+    padding-top: 9px;
     padding-right: 0;
     padding-bottom: 36px;
     padding-left: 0;
@@ -362,7 +442,7 @@
     margin: 0 auto;
     padding-top: 56px;
     padding-right: 0;
-    padding-bottom: 55px;
+    padding-bottom: 58px;
     padding-left: 60px;
   }
 
@@ -393,6 +473,15 @@
     width: 600px;
   }
 
+  .presentation__tool-bar {
+    display: block;
+    width: 288px;
+
+    &--main {
+      display: none;
+    }
+  }
+
   .presentation__tool {
     width: 411px;
     padding-top: 13px;
@@ -411,6 +500,40 @@
     }
   }
 
+  .presentation__item:nth-child(1) .presentation__tool-togle {
+    top: -7px;
+    left: 70px;
+  }
+
+  .presentation__item:nth-child(2) .presentation__tool-togle {
+    top: -6px;
+    left: 246px;
+  }
+
+  .presentation__item:nth-child(3) .presentation__tool-togle {
+    top: -6px;
+    left: 162px;
+  }
+
+  .presentation__item {
+
+    &:nth-child(2) {
+      padding-top: 12px;
+      padding-bottom: 10px;
+    }
+    &:nth-child(3) {
+
+      padding-top: 12px;
+      padding-bottom: 13px;
+      margin: 0;
+    }
+    &:nth-child(1) {
+
+      padding-top: 0;
+      padding-bottom: 13px;
+    }
+  }
+
   .presentation__tool-img {
     width: 46px;
     height: 46px;
@@ -418,7 +541,9 @@
     &--fill {
       width: 48px;
       height: 48px;
-      margin-top: 1px;
+      padding-left: 2px;
+      margin-top: 2px;
+      margin-right: 45px;
     }
 
     &--contrast {
@@ -426,11 +551,14 @@
       height: 33px;
       padding-bottom: 6px;
       padding-top: 5px;
-      margin-left: 6px;
+      margin-left: 8px;
+      margin-right: 52px;
     }
 
     &--crop {
       margin-top: -2px;
+      margin-right: 49px;
+      padding-left: 0;
     }
   }
 
@@ -444,7 +572,7 @@
     width: 185px;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 45px;
+    padding-left: 44px;
     padding-right: 45px;
     margin-top: 0;
   }

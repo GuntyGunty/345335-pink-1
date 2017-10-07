@@ -9,7 +9,6 @@
   outline: 0;
   cursor: pointer;
 }
-
 @mixin reset-text-style {
   margin: 0;
   padding: 0;
@@ -26,8 +25,8 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-@mixin retina {
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+// @mixin retina {
+//   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
-  }
-}
+//   }
+// }

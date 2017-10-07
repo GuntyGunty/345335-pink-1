@@ -28,8 +28,8 @@
   padding-top: 54px;
   position: relative;
 
-  &::before {
-    content: " ";
+  &:before {
+    content: '';
     position: absolute;
     top: -95px;
     display: block;
@@ -57,7 +57,6 @@
   position: relative;
   background-repeat: no-repeat;
   background-position: center 425px;
-
   @media (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 1.5dppx) {
     background-image: url("../img/iphone-screen-mobile@2x.png");
     background-size: 157px, 320px;
@@ -67,21 +66,20 @@
 .offer__item {
   width: 280px;
   margin: 0 auto;
+}
 
+.offer__item {
   @media (min-width: 960px) and (min-resolution: 144dpi), (min-width: 960px) and (min-resolution: 1.5dppx) {
-    &::before {
+    &:before {
       background-size: 292px 302px;
     }
-
-    &:nth-child(1)::before {
+    &:nth-child(1):before {
       background-image: url("../img/iphone-screen-1-desktop@2x.png");
     }
-
-    &:nth-child(2)::before {
+    &:nth-child(2):before {
       background-image: url("../img/iphone-screen-2-desktop@2x.png");
     }
-
-    &:nth-child(3)::before {
+    &:nth-child(3):before {
       background-image: url("../img/iphone-screen-3-desktop@2x.png");
     }
   }
@@ -150,15 +148,15 @@
   }
 
   .offer__break {
-    display: inline;
+    display: inline
   }
 
   .offer__advantages {
     padding-top: 18px;
   }
 
-  .offer__advantages::before {
-    content: " ";
+  .offer__advantages:before {
+    content: '';
     height: 90%;
   }
 
@@ -171,7 +169,6 @@
     position: relative;
     background-position: left 20px bottom;
     text-align: left;
-
     @media (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 1.5dppx) {
       background-image: url("../img/iphone-screen-3-tablet@2x.png");
       background-size: 269px, 481px;
@@ -208,8 +205,8 @@
     padding-left: 329px;
     max-width: 310px;
 
-    &::before {
-      content: " ";
+    &:before {
+      content: '';
       position: absolute;
       top: -14px;
       left: -11px;
@@ -245,7 +242,7 @@
 
   .offer__title {
     padding-top: 66px;
-    padding-bottom: 131px;
+    padding-bottom: 132px;
   }
 
   .offer__title > .offer__text {
@@ -271,9 +268,8 @@
     margin-top: 32px;
     padding-top: 54px;
     position: relative;
-
-    &::before {
-      content: " ";
+    &:before {
+      content: '';
       position: absolute;
       top: -95px;
       display: block;
@@ -292,8 +288,8 @@
     flex-basis: 240px;
     margin-left: 0;
 
-    &::before {
-      content: " ";
+    &:before {
+      content: '';
       padding-top: 358px;
       display: block;
       background-repeat: no-repeat;
@@ -310,31 +306,33 @@
       margin-right: 80px;
     }
 
-    &:nth-child(1)::before {
+    &:nth-child(1):before {
       background-image: url("../img/iphone-screen-1-desktop@1x.png");
     }
 
-    &:nth-child(2)::before {
+    &:nth-child(2):before {
       background-image: url("../img/iphone-screen-2-desktop@1x.png");
       background-position-x: -23px;
     }
 
-    &:nth-child(3)::before {
+    &:nth-child(3):before {
       background-image: url("../img/iphone-screen-3-desktop@1x.png");
       background-position-x: -23px;
+    }
+
+    &> .offer__item-text {
+      font-size: $font-size__title;
+      line-height: $font-size__text--big;
+      margin-bottom: 0;
     }
   }
 
   .offer__item > .offer__item-text {
-    font-size: $font-size__title;
-    line-height: $font-size__text--big;
-    margin-bottom: 0;
     margin-top: 23px;
   }
 
   .offer__text {
     font-weight: 300;
-
     &:nth-child(2) {
       width: 600px;
       line-height: 60px;
@@ -360,15 +358,14 @@
     display: block;
     padding-top: 94px;
     padding-bottom: 119px;
-    padding-left: 206px;
+    padding-left: 110px;
     max-width: 310px;
-    margin-left: 170px;
 
-    &::before {
-      content: " ";
+    &:before {
+      content: '';
       position: absolute;
       top: -73px;
-      left: -161px;
+      left: -256px;
       background-image: url("../img/bg-timer.png");
       background-repeat: no-repeat;
       background-position: center 72px, center center;
@@ -376,6 +373,11 @@
       width: 300px;
       height: 450px;
     }
+  }
+
+  .offer__effect-link {
+    text-decoration: none;
+    border-bottom: 1px solid $color-red;
   }
 
   .offer__effect-title {

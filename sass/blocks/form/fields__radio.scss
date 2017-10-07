@@ -38,6 +38,7 @@
   margin: 5px 0 0;
   margin-top: 5px;
   box-sizing: border-box;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -159,17 +160,10 @@
   }
 
   .fields-radio__text {
-    padding-left: 72px;
-    line-height: 30px;
-    &::after {
-      top: 12px;
-      left: 13px;
-    }
-  }
-
-  .fields-radio__text {
     position: relative;
     display: block;
+    padding-left: 72px;
+    line-height: 30px;
     &::after {
       content: "";
       position: absolute;

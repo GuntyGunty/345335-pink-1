@@ -82,7 +82,7 @@
   }
 
   .page-footer--photo .page-footer__social {
-    padding-top: 39px;
+    padding-top: 40px;
   }
 
   .page-footer__social-item {
@@ -95,30 +95,38 @@
     border-radius: 50%;
     text-align: center;
     box-sizing: border-box;
+
     &--twitter {
-      background-image: url('../img/icon-twitter.svg');
+      background-image: url("../img/icon-twitter.svg");
       background-position: center;
       background-repeat: no-repeat;
     }
+
     &--fb {
-      background-image: url('../img/icon-facebook.svg');
+      background-image: url("../img/icon-facebook.svg");
       background-position: center top 12px;
       background-repeat: no-repeat;
     }
+
     &--youtube {
-      background-image: url('../img/icon-youtube.svg');
-      background-position: center 45%, right 50%;
+      background-image: url("../img/icon-youtube.svg");
+      background-position: center 48%, right 50%;
       margin-right: 2px;
       background-repeat: no-repeat;
     }
+
     &:hover {
       border-color: $color-black;
     }
+
     &:active {
       border-color: $color-red-4;
+      opacity: 0.3;
     }
-    &:active > .page-footer__social-img {
-      fill: $color-red;
+  }
+
+  .page-footer__social-img {
+    &:active {
       opacity: 0.3;
     }
   }
@@ -148,7 +156,7 @@
   }
 
   .page-footer--photo .page-footer__copyright-text {
-    margin-bottom: 6px;
+    padding-right: 16px;
   }
 
   .page-footer__copyright-link {
@@ -192,11 +200,8 @@
       margin: 0 auto;
       padding-top: 4px;
       padding-right: 20px;
-      padding-bottom: 0;
+      padding-bottom: 40px;
       padding-left: 20px;
-      // &--photo {
-      //   padding-top: 0;
-      // }
     }
 
     .page-footer__social {
@@ -226,6 +231,7 @@
       margin-left: 0;
       margin-bottom: 5px;
       margin-left: 0;
+
       &--photo {
         margin-top: 0;
         margin-left: 0;
@@ -233,11 +239,19 @@
         margin-left: 0;
       }
     }
+
+    .page-footer--photo .page-footer__social {
+      margin-right: 15px;
+    }
   }
 
   @media (min-width: $desktop-widths)  {
     .page-footer {
       max-width: 1200px;
+    }
+
+    .page-footer--index .page-footer__copyright-text {
+      margin-bottom: 10px;
     }
 
     .photos-page__page-footer {
@@ -255,6 +269,14 @@
       }
     }
 
+    .page-footer--photo .page-footer__copyright-text {
+      padding-right: 14px;
+    }
+
+    .page-footer--photo .page-footer__wrapper {
+      padding-top: 37px;
+    }
+
     .page-footer__wrapper--form .page-footer__social {
       margin-right: 35px;
     }
@@ -266,6 +288,7 @@
     .page-footer__logo-img {
       display: block;
       margin: 0 auto;
+
       &--mobile {
         display: none;
       }

@@ -54,7 +54,6 @@
 }
 
 .fields-text__legend {
-  text-align: center;
   margin-top: 0;
   margin-right: 20px;
   margin-bottom: 11px;
@@ -64,6 +63,7 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $color-red;
+
   &--hidden {
     display: none;
   }
@@ -81,28 +81,28 @@
   border: 2px solid $color-gray-3;
   &:-ms-input-placeholder {
     font-size: $font-size__title;
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
     color: $color-black;
   }
   &::-webkit-input-placeholder {
     font-size: $font-size__title;
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
     color: $color-black;
   }
   &::-moz-placeholder {
     font-size: $font-size__title;
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
     color: $color-black;
   }
   &:-moz-placeholder {
     font-size: $font-size__title;
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
     color: $color-black;
@@ -284,6 +284,8 @@
     }
   }
 
+
+
   .fields-text__icon {
     display: inline-block;
     order: 2;
@@ -308,6 +310,7 @@
     padding-left: 17px;
     margin: 0 auto;
   }
+
 }
 
 
@@ -418,4 +421,5 @@
     width: 820px;
     min-height: 128px;
   }
+
 }

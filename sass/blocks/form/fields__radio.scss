@@ -59,6 +59,7 @@
   font-size: $font-size__title;
   line-height: 40px;
   font-weight: 400;
+
   &::after {
     content: "";
     position: absolute;
@@ -124,6 +125,7 @@
   .fields-radio__text {
     padding-left: 60px;
     line-height: 30px;
+
     &::after {
       top: 10px;
     }
@@ -164,6 +166,7 @@
     display: block;
     padding-left: 72px;
     line-height: 30px;
+
     &::after {
       content: "";
       position: absolute;

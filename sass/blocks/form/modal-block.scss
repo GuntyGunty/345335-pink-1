@@ -12,9 +12,11 @@
   &--show {
     display: block;
   }
+
   &--success {
     top: 25%;
   }
+
   &--failure {
     top: 28.8%;
   }
@@ -50,6 +52,7 @@
 
 .modal-block__btn {
   width: 280px;
+
   @include reset-button-style;
   display: block;
   margin: 0 auto;
@@ -64,6 +67,7 @@
   background-color: $color-green;
   color: $color-white;
   cursor: pointer;
+
   &:hover {
     background-color: $color-green-2;
   }
@@ -102,6 +106,7 @@
     &--success {
       top: 33.6%;
     }
+
     &--failure {
       top: 23.2%;
     }
@@ -130,7 +135,6 @@
 
   .modal-block--success .modal-block__wrapper {
     padding-top: 42px;
-
   }
 
   .modal-block__title {
@@ -156,6 +160,7 @@
       top: 21.2%;
       margin-left: 90px;
     }
+
     &--failure {
       top: 25.3%;
       left: 13.7%;
@@ -185,15 +190,17 @@
     width: 460px;
   }
 }
+
 @media (min-width: $large-desktop) {
   .modal-block {
-        &--success {
-          top: 50%;
-          left: 15%;
-        }
-        &--failure {
-          top: 50%;
-          left: 25%;
-        }
-      }
+    &--success {
+      top: 50%;
+      left: 15%;
+    }
+
+    &--failure {
+      top: 50%;
+      left: 25%;
+    }
+  }
 }

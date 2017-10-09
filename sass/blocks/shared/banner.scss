@@ -1,4 +1,4 @@
-  .banner {
+.banner {
   display: flex;
   min-height: 237px;
   justify-content: center;
@@ -11,15 +11,18 @@
 
 .banner__index {
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
   }
+
   @media (min-width: 660px) and (min-resolution: 144dpi),
-  (min-width: 660px) and (min-resolution: 1.5dppx) {
+    (min-width: 660px) and (min-resolution: 1.5dppx) {
     background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
   }
+
   @media (min-width: 960px) and (min-resolution: 144dpi),
-  (min-width: 960px) and (min-resolution: 1.5dppx) {
+    (min-width: 960px) and (min-resolution: 1.5dppx) {
     background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
   }
 }
@@ -64,7 +67,6 @@
   font-size: $font-size__title--big;
   font-weight: 100;
   line-height: 1.25em;
-  padding-top: 20px;
   padding-top: 44px;
 }
 
@@ -75,16 +77,19 @@
 .banner__form-page,
 .banner__photo-page {
   background-image: none, url("../img/bg-back-mobile@1x.jpg");
+
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: none, url("../img/bg-back-mobile@2x.jpg");
   }
+
   @media (min-width: 660px) and (min-resolution: 144dpi),
-  (min-width: 660px) and (min-resolution: 1.5dppx) {
+    (min-width: 660px) and (min-resolution: 1.5dppx) {
     background-image: none, url("../img/bg-back-tablet@2x.jpg");
     background-size: 1200px 680px;
   }
+
   @media (min-width: 960px) and (min-resolution: 144dpi),
-  (min-width: 960px) and (min-resolution: 1.5dppx) {
+    (min-width: 960px) and (min-resolution: 1.5dppx) {
     background-image: none, url("../img/bg-back-desktop@2x.jpg");
     background-size: 2530px;
   }
@@ -99,27 +104,20 @@
 
   .banner__form-page {
     background-size: 1189px 729px;
-  }
-
-  .banner__photo-page {
-    padding-top: 0;
-    background-position: center top;
-    background-size: 181%;
-    min-height: 468px;
-  }
-
-  .banner__photo-page {
-    padding-top: 55px;
-    min-height: 383px;
-  }
-
-  .banner__form-page {
     padding-top: 0;
     min-height: 439px;
   }
 
+  .banner__photo-page {
+    background-position: center top;
+    background-size: 181%;
+    padding-top: 55px;
+    min-height: 383px;
+  }
+
   .banner__index {
     padding-top: 189px;
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
     background-position: center bottom, center top;
     background-size: 700px, cover;
     min-height: 440px;
@@ -128,6 +126,7 @@
   .banner__inner {
     padding-top: 0;
     padding-right: 2px;
+
     &--photo {
       width: auto;
     }
@@ -136,19 +135,15 @@
   .banner__title {
     display: inline-block;
     font-size: $font-size__title--hugest;
-    line-height: $font-size__title--hugest;
     margin: 0 auto;
     line-height: 1.2em;
     text-align: center;
     padding: 0;
     font-weight: 300;
-    &--photo {
-      padding-bottom: 30px;
-    }
-  }
 
-  .banner__title--photo {
-    padding-bottom: 18px;
+    &--photo {
+      padding-bottom: 18px;
+    }
   }
 
   .banner-title--form {
@@ -156,76 +151,67 @@
     padding-top: 95px;
   }
 }
-  @media (min-width: $desktop-widths) {
-    .banner {
-      background-size: 1050px, cover;
-      background-position: bottom right 4px, center top;
-    }
 
-    .banner__index {
-      min-height: auto;
-      background-position: bottom right -115px, center top 10px;
-      padding-top: 134px;
-    }
+@media (min-width: $desktop-widths) {
+  .banner {
+    background-size: 1050px, cover;
+    background-position: bottom right 4px, center top;
+  }
 
-    .banner__inner {
-      padding-top: 20px;
-      padding-right: 360px;
-      padding-bottom: 0;
-      padding-left: 0;
-    }
+  .banner__index {
+    min-height: auto;
+    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
+    background-position: bottom right -115px, center top -1px;
+    padding-top: 134px;
+  }
 
-    .banner__inner--photo {
-      padding-right: 0;
-      padding-top: 35px;
-    }
+  .banner__inner {
+    padding-top: 20px;
+    padding-right: 360px;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
 
-    .banner__form-page,
-    .banner__photo-page {
-      padding-top: 53px;
-      background-size: 2530px;
-      background-position: bottom right 4px, center top 13px;
-      min-height: 339px;
-    }
+  .banner__inner--photo {
+    padding-right: 0;
+    padding-top: 36px;
+  }
 
-    .banner__title {
-      width: 800px;
-      font-size: $font-size__title--hugest;
-      font-weight: 300;
-      background: none;
-      &--photo {
-        width: 600px;
-      }
-    }
+  .banner__form-page,
+  .banner__photo-page {
+    padding-top: 53px;
+    background-size: 2530px;
+    background-position: bottom right 4px, center top 13px;
+    min-height: 339px;
+  }
 
-    .banner-title--form {
-      padding-top: 19px;
+  .banner__title {
+    width: 800px;
+    font-size: $font-size__title--hugest;
+    font-weight: 300;
+    background: none;
+
+    &--photo {
+      width: 600px;
     }
   }
-  @media (min-width: $large-desktop) {
-    .banner__index {
-      @media (min-width: 1400px) and (min-resolution: 144dpi),
-      (min-width:  1400px) and (min-resolution: 1.5dppx) {
-        background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
-        background-size: 1100px, cover;
-        min-height: auto;
-        background-position: bottom right 330px, center top;
-      }
-    }
 
-    .banner__index {
-        background-size: 600px, cover;
-        min-height: auto;
-        background-position: bottom right 460px, center top;
-
-    }
-
-    .banner__form-page,
-    .banner__photo-page {
-      padding-top: 53px;
-      background-size: cover;
-      background-position: center top -133px;
-      min-height: 339px;
-    }
-
+  .banner-title--form {
+    padding-top: 19px;
   }
+}
+
+@media (min-width: $large-desktop) {
+  .banner__index {
+    background-position: bottom right 290px, center top -1px;
+  }
+
+  .banner__form-page,
+  .banner__photo-page {
+    padding-top: 53px;
+    background-size: cover;
+    background-image: none, url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top 5px;
+    min-height: 339px;
+  }
+}

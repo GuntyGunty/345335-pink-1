@@ -4,7 +4,7 @@
   width: 100%;
   max-height: 430px;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: -40px;
@@ -70,8 +70,8 @@
     color: $color-red-4;
     width: 70px;
     height: 73px;
-    position: absolute;
   }
+
   &::after {
     position: absolute;
     content: attr(data-description);
@@ -142,7 +142,7 @@
     width: 100%;
     max-height: 630px;
 
-    &:before {
+    &::before {
       content: "";
       position: absolute;
       top: -4px;
@@ -181,6 +181,7 @@
     line-height: 1.2em;
     font-weight: 700;
     box-sizing: border-box;
+
     &--null {
       background-color: transparent;
     }
@@ -197,8 +198,8 @@
       color: $color-red-4;
       width: 70px;
       height: 80px;
-      position: absolute;
     }
+
     &::after {
       position: absolute;
       content: attr(data-description);
@@ -257,30 +258,28 @@
   }
 
   .packets__wrapper {
+    position: relative;
+    background-color: $color-white-gray;
+    width: 960px;
+    margin: 0 auto;
+    max-height: 630px;
     background-position: center -1px, left;
     background-size: 100%;
-}
 
-.packets__wrapper {
-  position: relative;
-  background-color: $color-white-gray;
-  width: 100%;
-  max-height: 630px;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: -11px;
-    height: 80px;
-    background-color: $color-white-gray;
-    background-image: url("../img/bg-triangle-white.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 0;
-    transform: translateY(-4px);
-    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11px;
+      height: 80px;
+      background-color: $color-white-gray;
+      background-image: url("../img/bg-triangle-white.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center 0;
+      transform: translateY(-4px);
+      width: 100%;
+    }
   }
-}
 
   .packets__table {
     max-width: 945px;
@@ -295,9 +294,13 @@
     padding-top: 16px;
     padding-right: 40px;
     padding-bottom: 20px;
-    padding-left: 40px;
+    padding-left: 38px;
     line-height: 30px;
     font-size: $font-size__title;
+  }
+
+  .packets__head:nth-child(2) {
+    padding-left: 40px;
   }
 
   .packets__head--hit {
@@ -311,8 +314,8 @@
       color: $color-red-4;
       width: 72px;
       height: 79px;
-      position: absolute;
     }
+
     &::after {
       position: absolute;
       content: attr(data-description);
@@ -334,9 +337,9 @@
   .packets__filter {
     width: 230px;
     padding-top: 8px;
-    padding-right: 18px;
+    padding-right: 20px;
     padding-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 18px;
     font-size: $font-size__title;
     line-height: 40px;
   }

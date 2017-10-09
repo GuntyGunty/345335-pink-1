@@ -1,5 +1,5 @@
 .page-header__title {
-  @include visually-hidden
+  @include visually-hidden;
 }
 
 .page-header__logo-img:hover .page-header__logo-path,
@@ -79,10 +79,11 @@
 .page-header__list {
   display: none;
   position: relative;
+
   @include reset-list-style;
 }
 
-.page-header__item>.page-header__link {
+.page-header__item > .page-header__link {
   display: block;
   width: 320px;
   padding-top: 19px;
@@ -100,20 +101,34 @@
   &:hover {
     color: $color-red;
   }
+}
 
-  &>.page-header__link:last-child {
-    padding-bottom: 17px;
+.page-header__item--active > .page-header__link {
+  &:hover {
+    color: $color-white;
   }
 }
 
-.page-header__link:active >.page-header__text{
+.page-header__link:active > .page-header__text {
   color: $color-red;
   opacity: 0.3;
 }
 
 .page-header__text--active {
   position: relative;
-  &:after {
+
+  &:hover {
+    color: $color-white;
+    opacity: 1;
+    cursor: default;
+  }
+
+  &:active {
+    color: $color-white;
+    opacity: 1;
+  }
+
+  &::after {
     content: "";
     position: absolute;
     right: 0;
@@ -125,26 +140,23 @@
 
 .page-header__item--active {
   cursor: default;
-}
 
-.page-header__item--active >.page-header__link {
   &:hover {
-    color:  $color-white;
+    color: $color-white;
     opacity: 1;
     cursor: default;
   }
 
   &:active {
-    color:  $color-white;
-    opacity: 1;
-
-  }
-
-  &>.page-header__text--active {
     color: $color-white;
-    cursor: default;
     opacity: 1;
   }
+}
+
+.page-header__item--active > .page-header__text--active {
+  color: $color-white;
+  cursor: default;
+  opacity: 1;
 }
 
 .page-header__btn-close {
@@ -252,7 +264,6 @@
 
 @media (min-width: $tablet-widths) {
   .page-header__logo-img {
-
     &--mobile {
       display: none;
     }
@@ -279,8 +290,8 @@
     top: 110px;
   }
 
-  .page-header__item>.page-header__link {
-  width: 660px;
+  .page-header__item > .page-header__link {
+    width: 660px;
   }
 
   .page-header__nav--open .page-header__inner {
@@ -310,7 +321,7 @@
     background-color: $color-black-opacity;
   }
 
-  .page-header__link:active >.page-header__text{
+  .page-header__link:active > .page-header__text {
     color: $color-white;
     opacity: 0.3;
   }
@@ -367,7 +378,7 @@
   .page-header__item > .page-header__link {
     width: 100px;
     background-color: transparent;
-    padding-top: 22px;
+    padding-top: 21px;
     padding-bottom: 20px;
     text-transform: capitalize;
     border: none;

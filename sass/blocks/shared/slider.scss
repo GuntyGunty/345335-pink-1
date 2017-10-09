@@ -22,7 +22,6 @@
 }
 
 .slider__pagination--packets .slider__pagination-item {
-
   &:nth-child(1) {
     margin-right: 16px;
   }
@@ -61,11 +60,12 @@
     background-color: $color-white;
     cursor: default;
   }
-  &--active:hover {
-    cursor: default;
-    border: 3px solid $color-background-gray;
-    background-color: $color-white;
-  }
+}
+
+.slider__pagination-item--active:hover {
+  cursor: default;
+  border: 3px solid $color-background-gray;
+  background-color: $color-white;
 }
 
 .slider__arrow {
@@ -82,6 +82,7 @@
   .slider__pagination {
     display: none;
   }
+
   .slider__arrow {
     @include reset-button-style;
     display: block;
@@ -95,18 +96,18 @@
     background-repeat: no-repeat;
 
     &--last {
-      right: 15px;
+      left: 3px;
     }
 
     &--next {
-      left: 5px;
+      right: 17px;
     }
 
-    &:hover{
+    &:hover {
       opacity: 0.6;
     }
 
-    &:active{
+    &:active {
       opacity: 0.1;
     }
   }

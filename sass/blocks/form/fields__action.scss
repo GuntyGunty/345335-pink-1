@@ -12,6 +12,7 @@
   font-size: $font-size__title;
   font-weight: 600;
   border-radius: 5px;
+
   @include reset-button-style;
   text-transform: uppercase;
   line-height: $font-size__text--big;

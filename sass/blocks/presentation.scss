@@ -89,7 +89,6 @@
 .presentation__tool-bar {
   display: none;
   height: 2px;
-  // -webkit-appearance: none;
   background: $color-background-gray;
   cursor: pointer;
 
@@ -180,6 +179,7 @@
   padding-right: 93px;
   padding-bottom: 16px;
   padding-left: 85px;
+  transition: all 0.25s;
   border: 3px solid $color-red;
   color: $color-red;
   background-color: transparent;
@@ -205,6 +205,11 @@
   &:active {
     color: $color-red-7;
   }
+
+   &:focus {
+    background-color: $color-red;
+    color: $color-white;
+  }
 }
 
 .presentation__btn-reset {
@@ -225,6 +230,11 @@
   &:active {
     background-color: $color-gray-13;
     color: $color-gray-4;
+  }
+
+  &:focus {
+    border-color: $color-gray-13;
+    color: $color-gray-13;
   }
 }
 

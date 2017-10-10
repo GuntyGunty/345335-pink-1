@@ -205,6 +205,21 @@
 
   .offer__effect-link {
     color: $color-red;
+
+    &:hover {
+      color: $color-background-gray;
+    }
+
+    &:active {
+      color: $color-background-gray;
+      opacity: 0.3;
+    }
+
+    &:focus{
+      color: $color-background-gray;
+      border-color: $color-background-gray;
+      opacity: 0.3;
+    }
   }
 
   .offer__effect-title {
@@ -398,6 +413,22 @@
     font-size: $font-size__title;
     border-bottom: 1px solid $color-red;
     text-decoration: none;
+
+    &:hover {
+      color: $color-background-gray;
+      border-color: $color-background-gray;
+    }
+
+    &:focus{
+      color: $color-background-gray;
+      border-color: $color-background-gray;
+      outline: none;
+      opacity: 1;
+    }
+
+     &:active {
+      opacity: 0.3;
+    }
   }
 
   .offer__effect-title {

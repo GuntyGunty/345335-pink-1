@@ -48,7 +48,7 @@
 }
 
 .fields-text__item:nth-child(3) .fields-text__title {
-  margin-top: 16px;
+  margin-top: 17px;
   margin-right: 22px;
   margin-bottom: 5px;
   margin-left: 22px;
@@ -163,6 +163,14 @@
   font-size: $font-size__title;
   line-height: 30px;
   border: 2px solid $color-gray-3;
+
+  &:focus {
+    border-color: $color-red;
+  }
+
+  &:active {
+    outline: 0;
+  }
 
   &:-ms-input-placeholder {
     color: $color-black;

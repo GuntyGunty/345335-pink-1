@@ -87,8 +87,8 @@
     @include reset-button-style;
     display: block;
     position: absolute;
-    font-size: $font-size__arrow;
-    top: 173px;
+    font-size: 0;
+    top: 210px;
     width: 22px;
     height: 42px;
     opacity: 0.3;
@@ -104,6 +104,10 @@
     }
 
     &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
       opacity: 0.6;
     }
 

@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title> Конкурс</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css">
+  <title>Конкурс</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
 <body>
@@ -166,7 +167,7 @@
     <nav class="page-header__nav page-header__nav--open">
       <div class="page-header__wrapper">
         <div class="page-header__inner">
-          <a class="page-header__logo-item" href="#">
+          <a class="page-header__logo-item" tabindex="1" href="index.html">
             <svg class="page-header__logo-img page-header__logo-img--mobile" width="75" height="22">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use>
             </svg>
@@ -177,30 +178,35 @@
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop"></use>
             </svg>
           </a>
-          <button class="page-header__btn-close  page-header__toggle" type="button" aria-label="Закрыть меню/Открыть меню">
-            <svg class="page-header__img-btn-close" width="23.867px" height="23.867px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-cross-pink"></use></svg>
-            <svg  class="page-header__img-btn-open" width="49.945px" height="24.007px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-burger"></use></svg>
+          <button class="page-header__btn-close  page-header__toggle" tabindex="2" type="button" aria-label="Закрыть меню/Открыть меню">
+            Кнопка открытия и закрытия меню
+            <svg class="page-header__img-btn-close" width="23.867px" height="23.867px">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-cross-pink"></use>
+            </svg>
+            <svg  class="page-header__img-btn-open" width="49.945px" height="24.007px">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-burger"></use>
+            </svg>
           </button>
         </div>
         <ul class="page-header__list">
           <li class="page-header__item">
             <a class="page-header__link" href="index.html">
-              <span class="page-header__text">Главная</span>
+              <span class="page-header__text" tabindex="3">Главная</span>
             </a>
           </li>
           <li class="page-header__item">
             <a class="page-header__link" href="photo.html">
-              <span class="page-header__text">Фотографии</span>
+              <span class="page-header__text" tabindex="4">Фотографии</span>
             </a>
           </li>
           <li class="page-header__item page-header__item--active">
             <a class="page-header__link" href="form.html">
-              <span class="page-header__text page-header__text--active">Конкурс</span>
+              <span class="page-header__text page-header__text--active" tabindex="5">Конкурс</span>
             </a>
           </li>
           <li class="page-header__item">
             <a class="page-header__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <span class="page-header__text">HTML&#160;academy</span>
+              <span class="page-header__text" tabindex="6">HTML&#160;academy</span>
             </a>
           </li>
         </ul>
@@ -209,7 +215,7 @@
   </header>
   <main>
     <div class="banner banner__form-page">
-      <h2 class="banner__title banner-title--form">Конкурс на самое безбашенное путешествие с Пинк</h2>
+      <h2 class="banner__title banner__title--form">Конкурс на самое безбашенное путешествие с Пинк</h2>
     </div>
     <section class="slogan slogan--form">
       <div class="slogan__inner">
@@ -224,15 +230,15 @@
           <fieldset class="fields-text__items">
             <label class="fields-text__item">
               <span class="fields-text__title">Фамилия:</span>
-              <input class="fields-text__input" type="text" name="surname" placeholder="Укажите фамилию *" required>
+              <input class="fields-text__input" tabindex="7" type="text" name="surname" placeholder="Укажите фамилию *" required>
             </label>
             <label class="fields-text__item">
               <span class="fields-text__title">Имя:</span>
-              <input class="fields-text__input" type="text" name="name" placeholder="Введите ваше имя *" required>
+              <input class="fields-text__input" tabindex="8" type="text" name="name" placeholder="Введите ваше имя *" required>
             </label>
             <label class="fields-text__item">
               <span class="fields-text__title">Отчество:</span>
-              <input class="fields-text__input" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+              <input class="fields-text__input" tabindex="9" type="text" name="patronymic" placeholder="Ну и отчество тоже">
             </label>
           </fieldset>
         </section>
@@ -243,27 +249,27 @@
             <div class="fields-checkbox__container">
               <label class="fields-checkbox__item">
                 <input class="fields-checkbox__input" type="checkbox" name="achievements" value="Selfie with shark" checked>
-                <span class="fields-checkbox__text" tabindex="0">Сделал селфи с акулой</span>
+                <span class="fields-checkbox__text" tabindex="15">Сделал селфи с акулой</span>
               </label>
               <label class="fields-checkbox__item">
                 <input class="fields-checkbox__input" type="checkbox" name="achievements" value="beach" checked>
-                <span class="fields-checkbox__text" tabindex="0">Обгорел на пляже</span>
+                <span class="fields-checkbox__text" tabindex="16">Обгорел на пляже</span>
               </label>
               <label class="fields-checkbox__item">
                 <input class="fields-checkbox__input" type="checkbox" name="achievements" value="Chuck Norris">
-                <span class="fields-checkbox__text" tabindex="0">Видел Чака Норриса</span>
+                <span class="fields-checkbox__text" tabindex="17">Видел Чака Норриса</span>
               </label>
               <label class="fields-checkbox__item">
                 <input class="fields-checkbox__input" type="checkbox" name="achievements" value="Souvenirs">
-                <span class="fields-checkbox__text" tabindex="0">Накупил сувениров</span>
+                <span class="fields-checkbox__text" tabindex="18">Накупил сувениров</span>
               </label>
               <label class="fields-checkbox__item">
                 <input class="fields-checkbox__input" type="checkbox" name="achievements" value="tower" checked>
-                <span class="fields-checkbox__text" tabindex="0">Удержал башню</span>
+                <span class="fields-checkbox__text" tabindex="19">Удержал башню</span>
               </label>
               <label class="fields-checkbox__item">
                 <input class="fields-checkbox__input" type="checkbox" name="achievements" value="hotel">
-                <span class="fields-checkbox__text" tabindex="0">Разгромил отель</span>
+                <span class="fields-checkbox__text" tabindex="20">Разгромил отель</span>
               </label>
             </div>
           </fieldset>
@@ -275,12 +281,12 @@
             <div class="fields-text__container">
               <label class="fields-text__item fields-text__item--contacts">
                 <span class="fields-text__title fields-text__title--contacts">Номер телефона:</span>
-                <input class="fields-text__input fields-text__input--contacts" type="tel" name="tel"  placeholder="Номер, пожалуйста">
+                <input class="fields-text__input fields-text__input--contacts" tabindex="13" type="tel" name="tel"  placeholder="Номер, пожалуйста">
                 <span class="fields-text__icon fields-text__icon--phone"></span>
                 </label>
               <label class="fields-text__item fields-text__item--contacts">
                 <span class="fields-text__title fields-text__title--contacts">Адрес почты:</span>
-                <input class="fields-text__input fields-text__input--contacts" type="email" name="email" placeholder="Введите почту *" required>
+                <input class="fields-text__input fields-text__input--contacts" type="email" tabindex="14" name="email" placeholder="Введите почту *" required>
                 <span class="fields-text__icon fields-text__icon--email"></span>
               </label>
             </div>
@@ -291,16 +297,16 @@
           <fieldset class="fields-radio__items">
             <legend class="fields-radio__legend">С каким приложением путешествовали?</legend>
             <label class="fields-radio__item">
-              <input class="fields-radio__input" type="radio" name="app" value="iOS" checked>
-              <span class="fields-radio__text" tabindex="0">Pink для iOS</span>
+              <input class="fields-radio__input" type="radio" tabindex="12" name="app" value="iOS" checked>
+              <span class="fields-radio__text" tabindex="10">Pink для iOS</span>
             </label>
             <label class="fields-radio__item">
-              <input class="fields-radio__input" type="radio" name="app" value="Android">
-              <span class="fields-radio__text" tabindex="0">Pink на Android</span>
+              <input class="fields-radio__input" type="radio" tabindex="13" name="app" value="Android">
+              <span class="fields-radio__text" tabindex="11">Pink на Android</span>
             </label>
             <label class="fields-radio__item">
-              <input class="fields-radio__input"  type="radio" name="app"  value="Windows Phone">
-              <span class="fields-radio__text" tabindex="0">Windows Phone</span>
+              <input class="fields-radio__input"  type="radio" tabindex="13" name="app"  value="Windows Phone">
+              <span class="fields-radio__text" tabindex="12">Windows Phone</span>
             </label>
           </fieldset>
         </section>
@@ -308,12 +314,12 @@
         <section class="form__fields fields-text">
           <fieldset class="fields-text__items fields-text__items--review">
             <legend class="fields-text__legend fields-text__legend--review">Опишите свои эмоции:</legend>
-            <textarea class="fields-text__textarea" tabindex="0" name="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="fields-text__textarea" tabindex="21" name="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
         </section>
 
         <section class="form__fields field-action">
-          <button class="field-action__btn" tabindex="0" type="submit">Отправить форму</button>
+          <button class="field-action__btn" tabindex="22" type="submit">Отправить форму</button>
           <p class="field-action__text"><span class="field-action__index">*</span> — обязательные <span class="field-action__hidden"> для заполнения</span>            поля</p>
         </section>
       </div>
@@ -322,7 +328,7 @@
   </main>
   <footer class="page-footer page-footer--form">
     <div class="page-footer__wrapper page-footer__wrapper--form">
-      <a class="page-footer__logo-link" href="#">
+      <a class="page-footer__logo-link" href="#" tabindex="23">
         <svg class="page-footer__logo-img  page-footer__logo-img--mobile" width="146.3px" height="40.375px">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-mobile"></use>
         </svg>
@@ -333,18 +339,18 @@
       <div class="page-footer__social">
         <h3 class="visually-hidden">Социальные кнопки</h3>
         <a class="page-footer__social-item page-footer__social-item--twitter" href="https://twitter.com/?lang=en">
-          <span class="visually-hidden">Twitter</span>
+          <span class="visually-hidden" tabindex="24">Twitter</span>
         </a>
         <a class="page-footer__social-item page-footer__social-item--fb" href="https://www.facebook.com/">
-          <span class="visually-hidden">Facebook</span>
+          <span class="visually-hidden" tabindex="25">Facebook</span>
         </a>
         <a class="page-footer__social-item page-footer__social-item--youtube" href="https://www.youtube.com/">
-          <span class="visually-hidden">YouTube</span>
+          <span class="visually-hidden" tabindex="26">YouTube</span>
         </a>
       </div>
       <div class="page-footer__copyright">
         <span class="page-footer__copyright-text">Разработано</span>
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="page-footer__copyright-link" tabindex="27" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Разработано командой HTML Academy</span>
           <svg class="page-footer__copyright-img" width="26.943px" height="34.09px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
         </a>

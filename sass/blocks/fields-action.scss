@@ -11,6 +11,7 @@
   padding: 17px 49px 17px 47px;
   font-size: $font-size__title;
   font-weight: 600;
+  transition: all 0.25s;
   border-radius: 5px;
 
   @include reset-button-style;
@@ -20,13 +21,17 @@
   color: $color-white;
   cursor: pointer;
 
-  &:hover {
+   &:hover {
     background-color: $color-green-2;
   }
 
   &:active {
     color: $color-green-3;
-    outline: none;
+  }
+
+  &:focus {
+    background-color: $color-green-2;
+    color: $color-green-3
   }
 
   &:disabled {

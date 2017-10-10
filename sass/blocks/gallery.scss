@@ -7,9 +7,9 @@
 .gallery__item {
   margin-bottom: 20px;
 
-  &:nth-child(1) .photo__text {
-    margin-bottom: 9px;
-  }
+  // &:nth-child(1) .photo__text {
+  //   margin-bottom: 9px;
+  // }
 
   &:nth-child(4) .photo__wrapper {
     padding-top: 17px;
@@ -28,9 +28,6 @@
   }
 }
 
-.gallery__item:nth-child(1) .photo__text--wide {
-  margin-bottom: 9px;
-}
 
 @media (min-width: $tablet-widths) {
   .gallery {

@@ -32,6 +32,14 @@ gulp.task('copy', function() {
   .pipe(gulp.dest('build'));
 });
 
+gulp.task('comb', function() {
+  gulp.src('sass/*.scss')
+    .pipe(csscomb())
+    .pipe(gulp.dest('sass/'))
+    .pipe(server.stream());
+});
+
+
 gulp.task('style', function() {
   gulp.src('sass/style.scss')
     .pipe(plumber())
@@ -62,7 +70,7 @@ gulp.task('images', function() {
 gulp.task('symbols', function() {
   return gulp.src('img/svg/*.svg')
   .pipe(svgmin())
-    .pipe(gulp.dest('build/img/'));
+  .pipe(gulp.dest('build/img/')); 
 });
 
 // gulp.task('js', function() {
@@ -93,6 +101,7 @@ gulp.task('build', function(fn) {
   run(
     'clean',
     'copy',
+    'comb',
     'style',
     'images',
     'symbols',

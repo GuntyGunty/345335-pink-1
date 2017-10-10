@@ -14,20 +14,3 @@
   margin: 0;
   padding: 0;
 }
-
-@mixin visually-hidden {
-  width: 1px;
-  height: 1px;
-  border: 0;
-  overflow: 0;
-  font-size: 0;
-  margin: 0;
-  padding: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-// @mixin retina {
-//   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-
-//   }
-// }

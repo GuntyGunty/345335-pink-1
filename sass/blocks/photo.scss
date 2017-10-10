@@ -20,7 +20,9 @@
 
   &--wide {
     width: $mobile-width;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -88,6 +90,10 @@
   }
 }
 
+.photo__wrapper--wide .photo__text--wide {
+  margin-bottom: 10px;
+}
+
 .photo__name {
   margin: 0;
   font-weight: 700;
@@ -112,31 +118,66 @@
   color: $color-gray-font;
 }
 
+// .photo__inner .photo__wrapper:nth-child(1) .photo__text {
+//   margin-bottom: 9px;
+// }
+
 .photo__like-block {
   display: flex;
   align-items: center;
-  width: 240px;
+  width: 243px;
 }
 
 .photo__like {
   width: 17px;
   height: 17px;
   padding-top: 0;
+  font-size: 0;
+  outline: none;
   border: none;
-  margin-left: -2px;
+  margin-left: -6px;
   background-color: transparent;
   background-position: center;
-  background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
+  transition: all 0.9s;
   cursor: pointer;
 }
 
 .photo__count {
-  margin-left: 16px;
+  margin-left: 20px;
   font-size: $font-size__text--small;
   line-height: 24px;
   text-transform: uppercase;
   color: $color-red;
+}
+
+.photo__icon {
+  fill: $color-red;
+  transition: all 0.25s;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.photo__like:hover .photo__icon {
+  fill: $color-background-gray;
+}
+
+.photo__like:focus .photo__icon {
+  fill: $color-background-gray;
+}
+
+.photo__like:active .photo__icon {
+  fill: $color-background-gray;
+  opacity: 0.3;
+}
+
+@media (min-width: 330px) and (max-width: $tablet-widths) {
+  .photo__img--wide,
+  .photo__link--wide {
+    width: 100%;
+  }
 }
 
 @media (min-width: $tablet-widths) {
@@ -223,23 +264,24 @@
 
   .photo__like-block {
     justify-content: space-between;
-    width: 243px;
+    width: 240px;
 
     &--wide {
+      width: 243px;
       justify-content: center;
       order: 1;
-      width: auto;
     }
   }
 
   .photo__like-block--wide .photo__count {
     padding-top: 2px;
+    margin-left: 117px;
   }
 
   .photo__like {
     order: 2;
     margin-bottom: 3px;
-    margin-left: 14.5px;
+    margin-left: 11px;
   }
 
   .photo__count {
@@ -321,11 +363,20 @@
     }
   }
 
+  .photo__like-block {
+    width: 239px;
+
+    &--wide {
+      width: 243px;
+    }
+  }
+
   .photo__like-block--wide .photo__count {
+    margin-left: 115px;
     padding-top: 0;
   }
 
   .photo__like-block--wide .photo__like {
-    margin-left: 16px;
+    margin-left: 11px;
   }
 }

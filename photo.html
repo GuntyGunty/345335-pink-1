@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Фотогалерея</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
@@ -180,6 +180,7 @@
       <div class="page-header__wrapper">
         <div class="page-header__inner">
           <a class="page-header__logo-item" tabindex="0" href="index.html">
+            Логотип Pink
             <svg class="page-header__logo-img page-header__logo-img--mobile" width="75" height="22">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use>
             </svg>
@@ -190,12 +191,12 @@
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop"></use>
             </svg>
           </a>
-          <button class="page-header__btn-close  page-header__toggle" tabindex="0" type="button" aria-label="Закрыть меню/Открыть меню">
+          <button class="page-header__btn-close  page-header__toggle" type="button" aria-label="Закрыть меню/Открыть меню">
             Кнопка открытия и закрытия меню
-            <svg class="page-header__img-btn-close" width="23.867px" height="23.867px">
+            <svg class="page-header__img-btn-close" tabindex="0" width="23.867px" height="23.867px">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-cross-pink"></use>
             </svg>
-            <svg  class="page-header__img-btn-open" width="49.945px" height="24.007px">
+            <svg  class="page-header__img-btn-open" tabindex="0" width="49.945px" height="24.007px">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-burger"></use>
             </svg>
           </button>
@@ -207,7 +208,7 @@
             </a>
           </li>
           <li class="page-header__item page-header__item--active">
-            <a class="page-header__link" href="photos.html">
+            <a class="page-header__link page-header__link--active" href="photos.html">
               <span class="page-header__text page-header__text--active">Фотографии</span>
             </a>
           </li>
@@ -240,14 +241,7 @@
 
     <section class="gallery">
       <article class="gallery__item  photo  photo--wide">
-          <a class="photo__link  photo__link--wide" href="#">
-            <picture>
-              <source media="(min-width:960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
-              <source media="(min-width:660px) and (max-width: 959px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-              <img class="photo__img photo__img--wide" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x"
-                alt="Панорама дня">
-            </picture>
-          </a>
+          <a class="photo__link  photo__link--wide" href="#">Горный пейзаж</a>
           <div class="photo__label-block">
             <p class="photo__label-text">Панорама дня</p>
           </div>
@@ -259,7 +253,7 @@
             <div class="photo__like-block  photo__like-block--wide">
               <button class="photo__like" type="submit" aria-label="Мне нравится">
                 Мне нравится
-                <svg class="photo__icon" width="13px" height="13px">
+                <svg class="photo__icon" width="14px" height="14px">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
                 </svg>
               </button>
@@ -271,10 +265,13 @@
         <article class="gallery__item photo">
           <a class="photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width:960px)" srcset="img/photo-1-desktop@1x.webp 1x, img/photo-1-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-1-tablet@1x.webp 1x, img/photo-1-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-1-mobile@1x.webp 1x, img/photo-1-mobile@2x.webp 2x">
               <source media="(min-width:960px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
               <source media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
               <img class="photo__img" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@1x.jpg 1x, img/photo-1-mobile@2x.jpg 2x"
-                alt="Авто">
+                alt="Автомобиль">
             </picture>
           </a>
           <div class="photo__wrapper">
@@ -285,7 +282,7 @@
             <div class="photo__like-block">
               <button class="photo__like" type="submit" aria-label="Мне нравится">
                 Мне нравится
-                <svg class="photo__icon" width="13px" height="13px">
+                <svg class="photo__icon" width="14px" height="14px">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
                 </svg>
               </button>
@@ -296,10 +293,13 @@
         <article class="gallery__item  photo">
           <a class="photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width:960px)" srcset="img/photo-2-desktop@1x.webp 1x, img/photo-2-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-2-tablet@1x.webp 1x, img/photo-2-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-2-mobile@1x.webp 1x, img/photo-2-mobile@2x.webp 2x">
               <source media="(min-width:960px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
               <source media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
-              <img class="photo__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@1x.jpg 1x, img/photo-2-mobile@1x.jpg 2x"
-                alt="Барабаны">
+              <img class="photo__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@1x.jpg 1x, img/photo-2-mobile@2x.jpg 2x"
+                alt="Барабанная установка">
             </picture>
           </a>
           <div class="photo__wrapper">
@@ -310,7 +310,7 @@
             <div class="photo__like-block">
               <button class="photo__like" type="submit" aria-label="Мне нравится">
                 Мне нравится
-                <svg class="photo__icon" width="13px" height="13px">
+                <svg class="photo__icon" width="14px" height="14px">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
                 </svg>
               </button>
@@ -321,10 +321,13 @@
         <article class="gallery__item  photo">
           <a class="photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width:960px)" srcset="img/photo-3-desktop@1x.webp 1x, img/photo-3-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-3-tablet@1x.webp 1x, img/photo-3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-3-mobile@1x.webp 1x, img/photo-3-mobile@2x.webp 2x">
               <source media="(min-width:960px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
               <source media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
-              <img class="photo__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@1x.jpg 1x, img/photo-3-mobile@1x.jpg 2x"
-                alt="Неволя">
+              <img class="photo__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@1x.jpg 1x, img/photo-3-mobile@2x.jpg 2x"
+                alt="Урбанистический пейзаж">
             </picture>
           </a>
           <div class="photo__wrapper">
@@ -335,7 +338,7 @@
             <div class="photo__like-block">
               <button class="photo__like" type="submit" aria-label="Мне нравится">
                 Мне нравится
-                <svg class="photo__icon" width="13px" height="13px">
+                <svg class="photo__icon" width="14px" height="14px">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
                 </svg>
               </button>
@@ -346,10 +349,13 @@
         <article class="gallery__item  photo">
           <a class="photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width:960px)" srcset="img/photo-4-desktop@1x.webp 1x, img/photo-4-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-4-tablet@1x.webp 1x, img/photo-4-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-4-mobile@1x.webp 1x, img/photo-4-mobile@2x.webp 2x">
               <source media="(min-width:960px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
               <source media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
-              <img class="photo__img" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@1x.jpg 1x, img/photo-4-mobile@1x.jpg 2x"
-                alt="Бахча">
+              <img class="photo__img" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@1x.jpg 1x, img/photo-4-mobile@2x.jpg 2x"
+                alt="Сельскохозяйственный пейзаж">
             </picture>
           </a>
           <div class="photo__wrapper">
@@ -360,7 +366,7 @@
             <div class="photo__like-block">
               <button class="photo__like" type="submit" aria-label="Мне нравится">
                 Мне нравится
-                <svg class="photo__icon" width="13px" height="13px">
+                <svg class="photo__icon" width="14px" height="14px">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
                 </svg>
               </button>
@@ -371,10 +377,13 @@
         <article class="gallery__item  photo">
           <a class="photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width:960px)" srcset="img/photo-5-desktop@1x.webp 1x, img/photo-5-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-5-tablet@1x.webp 1x, img/photo-5-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-5-mobile@1x.webp 1x, img/photo-5-mobile@2x.webp 2x">
               <source media="(min-width:960px)" srcset="img/photo-5-desktop@1x.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
               <source media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-5-tablet@1x.jpg 1x, img/photo-5-tablet@2x.jpg 2x">
-              <img class="photo__img" src="img/photo-5-mobile@1x.jpg" srcset="img/photo-5-mobile@1x.jpg 1x, img/photo-5-mobile@1x.jpg 2x"
-                alt="Горы">
+              <img class="photo__img" src="img/photo-5-mobile@1x.jpg" srcset="img/photo-5-mobile@1x.jpg 1x, img/photo-5-mobile@2x.jpg 2x"
+                alt="Горный пейзаж">
             </picture>
           </a>
           <div class="photo__wrapper">
@@ -385,7 +394,7 @@
             <div class="photo__like-block">
               <button class="photo__like" type="submit" aria-label="Мне нравится">
                 Мне нравится
-                <svg class="photo__icon" width="13px" height="13px">
+                <svg class="photo__icon" width="14px" height="14px">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
                 </svg>
               </button>
@@ -396,10 +405,13 @@
         <article class="gallery__item  photo">
           <a class="photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width:960px)" srcset="img/photo-6-desktop@1x.webp 1x, img/photo-6-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-6-tablet@1x.webp 1x, img/photo-6-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-6-mobile@1x.webp 1x, img/photo-6-mobile@2x.webp 2x">
               <source media="(min-width:960px)" srcset="img/photo-6-desktop@1x.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
               <source media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-6-tablet@1x.jpg 1x, img/photo-6-tablet@2x.jpg 2x">
-              <img class="photo__img" src="img/photo-6-mobile@1x.jpg" srcset="img/photo-6-mobile@1x.jpg 1x, img/photo-6-mobile@1x.jpg 2x"
-                alt="Полёт">
+              <img class="photo__img" src="img/photo-6-mobile@1x.jpg" srcset="img/photo-6-mobile@1x.jpg 1x, img/photo-6-mobile@2x.jpg 2x"
+                alt="Вид на закат">
             </picture>
           </a>
           <div class="photo__wrapper">
@@ -410,7 +422,7 @@
             <div class="photo__like-block">
               <button class="photo__like" type="submit" aria-label="Мне нравится">
                 Мне Нравится
-                <svg class="photo__icon" width="13px" height="13px">
+                <svg class="photo__icon" width="14px" height="14px">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
                 </svg>
                 </button>
@@ -429,9 +441,12 @@
       <div class="presentation__wrapper">
         <a class="presentation__link-img" href="#">
           <picture>
+            <source type="image/webp" media="(min-width:960px)" srcset="img/photo-7-desktop@1x.webp 1x, img/photo-7-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-7-tablet@1x.webp 1x, img/photo-7-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-7-mobile@1x.webp 1x, img/photo-7-mobile@2x.webp 2x">
             <source media="(min-width:960px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
             <source media="(min-width:660px) and (max-width: 959px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
-            <img class="presentation__img" src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@1x.jpg 1x, img/photo-7-mobile@1x.jpg 2x"
+            <img class="presentation__img" src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@1x.jpg 1x, img/photo-7-mobile@2x.jpg 2x"
               alt="Ваше фото">
           </picture>
         </a>
@@ -473,17 +488,18 @@
             </div>
           </div>
           <div class="presentation__btn-container">
-            <button class="presentation__btn-submit" tabindex="0" type="submit">Запостить</button>
-            <button class="presentation__btn-reset" tabindex="0" type="reset">Отмена</button>
+            <button class="presentation__btn-submit" tabindex="0" type="submit" aria-label="Запостить">Запостить</button>
+            <button class="presentation__btn-reset" tabindex="0" type="reset" aria-label="Отмена">Отмена</button>
           </div>
         </form>
       </div>
     </section>
 
   </main>
-  <footer class="page-footer  page-footer--photo">
+  <footer class="page-footer page-footer--photo">
     <div class="page-footer__wrapper page-footer__wrapper--photo">
-      <a class="page-footer__logo-link" href="#">
+      <a class="page-footer__logo-link" href="index.html">
+        Логотип Pink
         <svg class="page-footer__logo-img  page-footer__logo-img--mobile" width="146.3px" height="40.375px">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-mobile"></use>
         </svg>
@@ -492,7 +508,7 @@
         </svg>
       </a>
       <div class="page-footer__social">
-        <h3 class="visually-hidden">Социальные кнопки</h3>
+        <h3 class="visually-hidden">Присоединяйтесь к нам в социальных сетях</h3>
         <a class="page-footer__social-item page-footer__social-item--twitter" href="https://twitter.com/?lang=en">
           <span class="visually-hidden">Twitter</span>
         </a>
@@ -507,7 +523,9 @@
         <span class="page-footer__copyright-text">Разработано</span>
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Разработано командой HTML Academy</span>
-          <svg class="page-footer__copyright-img" width="26.943px" height="34.09px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
+          <svg class="page-footer__copyright-img" width="26.943px" height="34.09px">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>

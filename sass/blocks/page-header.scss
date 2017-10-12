@@ -20,11 +20,11 @@
 
   &:focus {
     outline: none;
-    fill: $color-red;
+    fill: $color-pink;
   }
 
   &:hover {
-    fill: $color-red;
+    fill: $color-pink;
   }
 
   &:active {
@@ -42,9 +42,7 @@
 
 .page-header__inner {
   display: flex;
-  position: absolute;
-  left: 0;
-  right: 0;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   padding-top: 20px;
@@ -75,36 +73,78 @@
   outline: none;
   padding-bottom: 19px;
   border-bottom: 1px solid $color-black;
-  border-top: 1px solid $color-light-gray;
+  border-top: 1px solid $color-deepblue-light;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: $font-size__title;
+  font-size: $font-size-small;
   color: $color-white;
-  background-color: $color-background-gray;
+  background-color: $color-deepblue;
 
   &:hover {
-    color: $color-red;
+    color: $color-pink;
   }
 }
 
-.page-header__item--active > .page-header__link {
+.page-header__link:active > .page-header__text {
+  color: $color-pink;
+  opacity: 0.3;
+}
+
+.page-header__link:focus > .page-header__text {
+  color: $color-pink;
+  outline: none;
+}
+
+.page-header__item--active > .page-header__link--active {
+  cursor: default;
+
+  &:hover {
+    color: $color-white;
+    opacity: 1;
+    cursor: default;
+  }
+
+  &:active {
+    color: $color-white;
+    opacity: 1;
+  }
+}
+
+.page-header__link--active {
   cursor: default;
 
   &:hover {
     color: $color-white;
   }
+
+  &:active {
+    color: $color-white;
+  }
+
+  &:focus {
+    color: $color-white;
+  }
 }
 
-.page-header__link:active > .page-header__text {
-  color: $color-red;
-  opacity: 0.3;
-}
+.page-header__link--active > .page-header__text--active {
+  position: relative;
 
-.page-header__link:focus > .page-header__text {
-  color: $color-red;
-  outline: none;
+  &:hover {
+    color: $color-white;
+    opacity: 1;
+    cursor: default;
+  }
+
+  &:active {
+    color: $color-white;
+    opacity: 1;
+  }
+
+  &:focus {
+    color: $color-pink;
+  }
 }
 
 .page-header__text--active {
@@ -127,32 +167,32 @@
     right: 0;
     bottom: -9px;
     width: 100%;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid $color-white;
   }
 }
 
-.page-header__item--active {
-  cursor: default;
-
-  &:hover {
-    color: $color-white;
-    opacity: 1;
-    cursor: default;
-  }
-
-  &:active {
-    color: $color-white;
-    opacity: 1;
+.page-header__link--active:focus > .page-header__text--active {
+  &::after {
+    border-color: $color-pink;
   }
 }
 
-.page-header__item--active > .page-header__text--active {
-  color: $color-white;
-  cursor: default;
-  opacity: 1;
+.page-header__link--active:focus .page-header__text--active {
+  color: $color-pink;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -9px;
+    width: 100%;
+    border-bottom: 2px solid $color-pink;
+  }
 }
 
 .page-header__logo-item {
+  font-size: 0;
+
   &:active {
     outline: none;
   }
@@ -163,7 +203,7 @@
 }
 
 .page-header__logo-item:focus .page-header__logo-img {
-  fill: $color-red;
+  fill: $color-pink;
   outline: none;
 }
 
@@ -186,12 +226,16 @@
   fill: $color-white;
 
   &:hover {
-    fill: $color-red-2;
+    fill: $color-pink-dark;
+  }
+
+  &:focus {
+    fill: $color-pink-dark;
   }
 
   &:active {
     outline: none;
-    fill: $color-red-opacity;
+    fill: $color-pink-opacity;
   }
 }
 
@@ -201,12 +245,16 @@
   fill: $color-white;
 
   &:hover {
-    fill: $color-red-2;
+    fill: $color-pink-dark;
+  }
+
+  &:focus {
+    fill: $color-pink-dark;
   }
 
   &:active {
     outline: none;
-    fill: $color-red-opacity;
+    fill: $color-pink-opacity;
   }
 }
 
@@ -250,25 +298,12 @@
   position: static;
 }
 
-.page-header--nojs .page-header__toggle {
-  display: none;
-}
-
-.page-header--nojs .page-header__item {
-  display: block;
-}
-
-.page-header--nojs .page-header__logo-item {
-  position: static;
-}
-
 .page-header__nav--open .page-header__list {
   display: block;
-  top: 69px;
 }
 
 .page-header__nav--open .page-header__inner {
-  background-color: $color-background-gray;
+  background-color: $color-deepblue;
   border-bottom: 1px solid $color-black;
 }
 
@@ -289,19 +324,15 @@
 
   .page-header__inner {
     min-height: 110px;
-    padding-bottom: 40px;
+    padding-bottom: 33px;
   }
 
   .page-header__btn-close {
     padding-top: 9px;
   }
 
-  .page-header__nav--open .page-header__list {
-    top: 110px;
-  }
-
   .page-header__nav--open .page-header__inner {
-    background-color: $color-background-gray;
+    background-color: $color-deepblue;
     border-bottom: 1px solid $color-black;
     min-height: 56px;
   }
@@ -335,7 +366,7 @@
 
   .page-header__inner {
     position: static;
-    margin-right: 157px;
+    margin-right: 158px;
     min-height: auto;
     padding: 0;
   }
@@ -343,6 +374,7 @@
   .page-header__wrapper {
     display: flex;
     padding-top: 20px;
+    padding-left: 9px;
     padding-bottom: 25px;
     align-items: center;
     width: 940px;
@@ -388,8 +420,8 @@
     padding-bottom: 20px;
     text-transform: capitalize;
     border: none;
-    font-size: $font-size__title;
-    line-height: $font-size__title;
+    font-size: $font-size-small;
+    line-height: $font-size-small;
     font-weight: 400;
   }
 
@@ -399,6 +431,10 @@
 
   .page-header__item:nth-child(4) > .page-header__link {
     width: 130px;
+  }
+
+  .page-header--closed .page-header__item {
+    display: block;
   }
 
   .page-header__nav--open .page-header__list {

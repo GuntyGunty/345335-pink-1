@@ -1,6 +1,6 @@
 .fields-radio {
   width: $mobile-width;
-  background-color: $color-white-gray;
+  background-color: $color-smokewhite-darkest;
 }
 
 .fields-radio__items {
@@ -29,7 +29,7 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
-  color: $color-red;
+  color: $color-pink;
 }
 
 .fields-radio__item {
@@ -56,7 +56,7 @@
   padding-bottom: 15px;
   padding-left: 70px;
   cursor: pointer;
-  font-size: $font-size__title;
+  font-size: $font-size-small;
   line-height: 40px;
   font-weight: 400;
 
@@ -68,7 +68,7 @@
     left: 0;
     top: 15px;
     border-radius: 50%;
-    border: 2px solid $color-gray-3;
+    border: 2px solid$color-smokewhite;
     background-color: $color-white;
     box-sizing: border-box;
   }
@@ -79,7 +79,7 @@
 }
 
 .fields-radio__text:active::after {
-  border-color: $color-red;
+  border-color: $color-pink;
 }
 
 .fields-radio__input:checked + .fields-radio__text::before {
@@ -90,7 +90,7 @@
   top: 27px;
   left: 13px;
   border-radius: 50%;
-  background-color: $color-red;
+  background-color: $color-pink;
   z-index: 1;
 }
 
@@ -106,13 +106,18 @@
     padding-top: 28px;
     padding-right: 0;
     padding-bottom: 43px;
-    padding-left: 58px;
-    border: 2px solid $color-gray-3;
+    padding-left: 40px;
+    border: 2px solid $color-smokewhite;
   }
 
   .fields-radio__legend {
-    padding: 0 25px;
-    margin: 0;
+    display: inline-block;
+    background-color: $color-white;
+    margin-left: auto;
+    margin-right: 122px;
+    margin-bottom: 27px;
+    padding: 0 28px;
+    margin-top: -43px;
     line-height: 30px;
   }
 
@@ -144,12 +149,17 @@
   .fields-radio__items {
     width: 435px;
     padding-top: 30px;
-    padding-right: 0;
+    padding-right: 10px;
     padding-bottom: 45px;
-    padding-left: 60px;
+    padding-left: 0;
   }
 
   .fields-radio__legend {
+    width: 320px;
+    margin-top: -45px;
+    margin-left: 101px;
+    margin-right: 90px;
+    margin-bottom: 29px;
     padding-top: 0;
     padding-right: 27px;
     padding-bottom: 0;

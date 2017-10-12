@@ -6,7 +6,7 @@
 .presentation__title-container {
   max-width: $mobile-width;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-right: 32px;
   padding-bottom: 43px;
   padding-left: 29px;
@@ -18,17 +18,17 @@
   text-align: center;
 
   @include reset-text-style;
-  font-size: $font-size__text--more;
+  font-size: $font-size-smaller;
   font-weight: 400;
   line-height: 30px;
-  color: $color-gray-font;
+  color: $color-deepblue-dark;
 }
 
 .presentation__wrapper {
   max-width: $mobile-width;
   margin: 0 auto;
   padding: 20px 0 41px 0;
-  background-color: $color-white-gray;
+  background-color: $color-smokewhite-lighter;
   box-sizing: border-box;
 }
 
@@ -57,7 +57,7 @@
 .presentation__list-container {
   margin: 0 auto;
   width: $mobile-width;
-  border-bottom: 2px solid $color-gray-4;
+  border-bottom: 2px solid $color-smokewhite-light;
 }
 
 .presentation__item {
@@ -89,7 +89,7 @@
 .presentation__tool-bar {
   display: none;
   height: 2px;
-  background: $color-background-gray;
+  background: $color-deepblue;
   cursor: pointer;
 
   &--main {
@@ -113,12 +113,16 @@
   content: "";
   height: 10px;
   width: 10px;
-  border: 2px solid $color-red;
+  border: 2px solid $color-pink;
   border-radius: 50%;
-  background: $color-white-gray;
+  background: $color-smokewhite-lighter;
 
   &:hover {
-    background: $color-red;
+    background: $color-pink;
+  }
+
+  &:focus {
+    background: $color-pink;
   }
 }
 
@@ -127,43 +131,51 @@
   left: 193px;
 }
 
-
 .presentation__tool-img {
   cursor: pointer;
-  fill: $color-gray-13;
+  fill: $color-gray-lighter;
 
   &:hover {
-    fill: $color-gray-12;
+    fill: $color-deepblue-extralight;
+  }
+
+  &:focus {
+    outline: none;
+    fill: $color-deepblue-extralight;
   }
 }
 
 .presentation__tool-img--active {
-  fill: $color-red;
+  fill: $color-pink;
   cursor: default;
 
   &:hover {
-    fill: $color-red;
+    fill: $color-pink;
   }
 
   &:active {
-    fill: $color-red;
+    fill: $color-pink;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
 .presentation__tool-img-fill:hover {
-  fill: $color-gray-12;
+  fill: $color-deepblue-extralight;
 }
 
 .presentation__tool-img-crop:hover {
-  fill: $color-gray-12;
+  fill: $color-deepblue-extralight;
 }
 
 .presentation__tool:hover .presentation__tool-img {
-  fill: $color-gray-12;
+  fill: $color-deepblue-extralight;
 }
 
 .presentation__tool:active .presentation__tool-img {
-  fill: $color-red;
+  fill: $color-pink;
 }
 
 .presentation__btn-container {
@@ -173,17 +185,17 @@
 
 .presentation__btn-submit,
 .presentation__btn-reset {
-  font-size: $font-size__title;
+  font-size: $font-size-small;
   font-weight: bold;
   padding-top: 16px;
   padding-right: 93px;
   padding-bottom: 16px;
   padding-left: 85px;
   transition: all 0.25s;
-  border: 3px solid $color-red;
-  color: $color-red;
+  border: 3px solid $color-pink;
+  color: $color-pink;
   background-color: transparent;
-  line-height: $font-size__title;
+  line-height: $font-size-small;
   outline: none;
   cursor: pointer;
 }
@@ -198,23 +210,23 @@
   border-radius: 25px;
 
   &:hover {
-    background-color: $color-red;
+    background-color: $color-pink;
+    color: $color-white;
+  }
+
+  &:focus {
+    background-color: $color-pink;
     color: $color-white;
   }
 
   &:active {
-    color: $color-red-7;
-  }
-
-   &:focus {
-    background-color: $color-red;
-    color: $color-white;
+    color: $color-pink-light;
   }
 }
 
 .presentation__btn-reset {
-  border: 3px solid $color-gray-4;
-  color: $color-gray-4;
+  border: 3px solid $color-smokewhite-light;
+  color: $color-smokewhite-light;
   border-radius: 25px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -223,18 +235,18 @@
   padding-left: 100px;
 
   &:hover {
-    border-color: $color-gray-13;
-    color: $color-gray-13;
+    border-color: $color-gray-lighter;
+    color: $color-gray-lighter;
   }
 
   &:active {
-    background-color: $color-gray-13;
-    color: $color-gray-4;
+    background-color: $color-gray-lighter;
+    color: $color-smokewhite-light;
   }
 
   &:focus {
-    border-color: $color-gray-13;
-    color: $color-gray-13;
+    border-color: $color-gray-lighter;
+    color: $color-smokewhite-light;
   }
 }
 
@@ -253,7 +265,7 @@
   }
 
   .presentation__title {
-    font-size: $font-size__title;
+    font-size: $font-size-small;
   }
 
   .presentation__wrapper {
@@ -324,7 +336,7 @@
     padding-left: 0;
     padding-bottom: 12px;
     margin: 0;
-    border-bottom: 1px solid $color-gray-4;
+    border-bottom: 1px solid $color-smokewhite-light;
 
     &:nth-child(1) {
       padding-top: 6px;
@@ -344,7 +356,7 @@
   }
 
   .presentation__tool-img--crop:hover {
-    fill: $color-gray-12;
+    fill: $color-deepblue-extralight;
     cursor: pointer;
   }
 
@@ -407,7 +419,7 @@
     width: 25px;
     height: 25px;
     margin-right: 48px;
-    fill: $color-red;
+    fill: $color-pink;
 
     &--crop {
       margin-right: 30px;
@@ -429,6 +441,24 @@
     }
   }
 
+  .presentation__tool-img--active {
+    fill: $color-pink;
+    cursor: default;
+
+    &:hover {
+      fill: $color-pink;
+    }
+
+    &:active {
+      fill: $color-deepblue-extralight;
+    }
+
+    &:focus {
+      outline: none;
+      fill: $color-deepblue-extralight;
+    }
+  }
+
   .presentation__btn-submit,
   .presentation__btn-reset {
     align-self: center;
@@ -439,7 +469,7 @@
     padding-right: 87px;
     padding-bottom: 16px;
     padding-left: 74px;
-    font-size: $font-size__title;
+    font-size: $font-size-small;
     font-weight: 700;
     box-sizing: border-box;
   }
@@ -605,16 +635,22 @@
 
   .presentation__btn-submit,
   .presentation__btn-reset {
-    width: 185px;
+    width: 183px;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 44px;
+    padding-left: 43px;
     padding-right: 45px;
     margin-top: 0;
   }
 
   .presentation__btn-submit {
+    letter-spacing: 0.3px;
     margin-right: 40px;
+  }
+
+  .presentation__btn-reset {
+    padding-right: 40px;
+    letter-spacing: 1.2px;
   }
 
   .presentation__btn-container {

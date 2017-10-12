@@ -7,7 +7,7 @@
 .download__title {
   display: none;
   color: $color-white;
-  font-size: $font-size__title--huge;
+  font-size: $font-size-huge;
   font-weight: 100;
   text-align: center;
   margin-bottom: 35px;
@@ -17,7 +17,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 33px;
 }
 
 .download__link {
@@ -64,6 +63,7 @@
 
 .download__title-text {
   @include reset-text-style;
+
   line-height: 40px;
   font-weight: 300;
 }
@@ -74,29 +74,31 @@
   padding-bottom: 15px;
   padding-left: 35px;
   display: block;
+  margin-bottom: 33px;
   text-decoration: none;
   color: $color-white;
   border: 3px solid $color-white;
   border-radius: 25px;
   text-align: center;
-  font-size: $font-size__title;
-  line-height: $font-size__title;
+  font-size: $font-size-small;
+  line-height: $font-size-small;
   font-weight: 700;
   transition: all 0.25s;
 
   &:hover, {
     background-color: $color-white;
-    color: $color-red;
+    color: $color-pink;
   }
 
   &:focus {
     background-color: $color-white;
-    color: $color-red;
+    color: $color-pink;
+    outline: none;
   }
 
   &:active {
     background-color: $color-white;
-    color: $color-red-opacity;
+    color: $color-pink-opacity;
   }
 }
 
@@ -117,8 +119,12 @@
   }
 
   .download__text {
-    font-size: $font-size__title;
+    font-size: $font-size-small;
     margin-top: 37px;
+  }
+
+  .download__link--android {
+    height: 50px;
   }
 
   .download__title-text {
@@ -126,7 +132,8 @@
   }
 
   .download__btn {
-    margin-bottom: 45px;
+    margin-bottom: 47px;
+    padding-bottom: 16px;
   }
 }
 
@@ -139,7 +146,7 @@
   }
 
   .download__title {
-    font-size: $font-size__title--hugest;
+    font-size: $font-size-hugest;
     margin-bottom: 52px;
   }
 
@@ -161,6 +168,6 @@
     padding-top: 15px;
     padding-left: 23px;
     padding-right: 26px;
-    font-size: $font-size__title--more;
+    font-size: $font-size-big;
   }
 }

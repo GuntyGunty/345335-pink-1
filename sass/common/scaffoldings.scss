@@ -1,9 +1,10 @@
 body {
   margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
-  font-size: $font-size__text--more;
+  font-size: $font-size-smaller;
   font-weight: 400;
-  color: $color-background-gray;
+  min-width: 320px;
+  color: $color-deepblue;
   background-color: $color-white;
 }
 
@@ -11,6 +12,10 @@ img {
   max-width: 100%;
   height: auto;
   border: none;
+}
+
+.nojs {
+  display: block;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -24,4 +29,16 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (min-width: $tablet-widths) {
+  body {
+    min-width: 660px;
+  }
+}
+
+@media (min-width: $desktop-widths) {
+  body {
+    min-width: 960px;
+  }
 }

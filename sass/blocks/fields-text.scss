@@ -44,7 +44,7 @@
   margin-left: 22px;
   line-height: 30px;
   text-transform: uppercase;
-  color: $color-red;
+  color: $color-pink;
 }
 
 .fields-text__item:nth-child(3) .fields-text__title {
@@ -63,7 +63,7 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
-  color: $color-red;
+  color: $color-pink;
 
   &--hidden {
     display: none;
@@ -76,16 +76,16 @@
   padding-bottom: 14px;
   padding-left: 20px;
   outline: 0;
-  font-size: $font-size__title;
+  font-size: $font-size-small;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   line-height: 30px;
   color: $color-black;
   box-sizing: border-box;
-  border: 2px solid $color-gray-3;
+  border: 2px solid $color-smokewhite;
 
   &:-ms-input-placeholder {
-    font-size: $font-size__title;
+    font-size: $font-size-small;
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
@@ -93,7 +93,7 @@
   }
 
   &::-webkit-input-placeholder {
-    font-size: $font-size__title;
+    font-size: $font-size-small;
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
@@ -101,7 +101,7 @@
   }
 
   &::-moz-placeholder {
-    font-size: $font-size__title;
+    font-size: $font-size-small;
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
@@ -109,7 +109,7 @@
   }
 
   &:-moz-placeholder {
-    font-size: $font-size__title;
+    font-size: $font-size-small;
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
@@ -121,7 +121,7 @@
   }
 
   &:focus {
-    border-color: $color-red;
+    border-color: $color-pink;
   }
 }
 
@@ -133,7 +133,7 @@
   margin: 0;
   box-sizing: border-box;
   border: 0;
-  background-color: $color-gray-3;
+  background-color: $color-smokewhite;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -159,13 +159,18 @@
   color: $color-black;
   font-family: "Open Sans", "Arial", sans-serif;
   resize: none;
+  overflow: hidden;
   box-sizing: border-box;
-  font-size: $font-size__title;
+  font-size: $font-size-small;
   line-height: 30px;
-  border: 2px solid $color-gray-3;
+  border: 2px solid $color-smokewhite;
+
+  &:hover {
+    border-color: $color-black;
+  }
 
   &:focus {
-    border-color: $color-red;
+    border-color: $color-pink;
   }
 
   &:active {
@@ -202,13 +207,13 @@
     padding: 0;
 
     &--contacts {
-      border: 2px solid $color-gray-3;
+      border: 2px solid $color-smokewhite;
       padding-top: 36px;
       padding-bottom: 16px;
     }
 
     &--review {
-      border: 2px solid $color-gray-3;
+      border: 2px solid $color-smokewhite;
       padding-top: 37px;
       padding-left: 2px;
       padding-bottom: 50px;
@@ -221,11 +226,18 @@
     padding-right: 30px;
 
     &--hidden {
-      display: block;
+      display: inline-block;
+      background-color: $color-white;
+      margin-top: -45px;
+      margin-bottom: 36px;
     }
   }
 
   .fields-text__legend--review {
+    display: inline-block;
+    margin-top: -45px;
+    margin-bottom: 37px;
+    background-color: $color-white;
     padding-left: 37px;
     padding-right: 37px;
   }
@@ -262,7 +274,7 @@
     min-width: 62px;
     box-sizing: border-box;
     border: 0;
-    background-color: $color-gray-3;
+    background-color: $color-smokewhite;
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
@@ -294,6 +306,15 @@
       margin-bottom: 10px;
       margin-left: 18px;
     }
+  }
+
+  .fields-text__item:nth-child(2) .fields-text__input {
+    padding-left: 20px;
+  }
+
+  .fields-text__item--contacts:nth-child(2) .fields-text__input--contacts {
+    padding-left: 18px;
+    padding-top: 15px;
   }
 
   .fields-text__item:nth-child(3) .fields-text__title {
@@ -329,7 +350,7 @@
 
   .fields-text__textarea {
     width: 500px;
-    min-height: 194px;
+    min-height: 193px;
     padding-top: 14px;
     padding-right: 17px;
     padding-bottom: 14px;
@@ -337,7 +358,6 @@
     margin: 0 auto;
   }
 }
-
 
 @media (min-width: $desktop-widths) {
   .fields-text {
@@ -367,7 +387,7 @@
   }
 
   .fields-text__items--contacts {
-    max-width: 936px;
+    min-width: 940px;
     padding-top: 34px;
     padding-right: 54px;
     padding-bottom: 13px;
@@ -376,18 +396,23 @@
   }
 
   .fields-text__legend {
-    margin: 0;
     padding-top: 0;
     padding-right: 33px;
+    display: inline-block;
+    margin: 0 auto;
     padding-bottom: 0;
     padding-left: 29px;
 
     &--hidden {
-      display: block;
+      display: inline-block;
+      margin-top: -44px;
+      margin-bottom: 34px;
     }
 
     &--review {
       padding-left: 33px;
+      margin-top: -40px;
+      margin-bottom: 33px;
       padding-right: 33px;
     }
   }
@@ -431,7 +456,7 @@
     margin-top: 9px;
     margin-right: 18px;
     margin-bottom: 0;
-    margin-left: 20px;
+    margin-left: 19px;
   }
 
   .fields-text__item:nth-child(3) .fields-text__title {
@@ -446,10 +471,27 @@
     padding-left: 21px;
 
     &--contacts {
-      padding-left: 19px;
+      padding-left: 18px;
+      padding-top: 14px;
+      padding-bottom: 14px;
       width: 315px;
     }
   }
+
+  .fields-text__icon {
+    height: 62px;
+    min-width: 60px;
+
+    &--mail {
+      height: 63px;
+    }
+
+    &--phone {
+      height: 63px;
+      background-position-x: 18px;
+    }
+  }
+
 
   .fields-text__textarea {
     width: 820px;

@@ -13,5 +13,3 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('page-header--opened');
   }
 });
-
-

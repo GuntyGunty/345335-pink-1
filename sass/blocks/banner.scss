@@ -189,7 +189,7 @@
   .banner__index {
     min-height: auto;
     background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
-    background-position: bottom right -115px, center top -1px;
+    background-position: bottom right -115px, center top 10px;
     padding-top: 135px;
   }
 
@@ -210,7 +210,7 @@
     padding-top: 53px;
     background-size: 2555px;
     background-image: none, url("../img/bg-back-desktop@1x.jpg");
-    background-position: center top;
+    background-position: center top 10px;
     min-height: 340px;
   }
 

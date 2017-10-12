@@ -17,13 +17,13 @@
 
 .offer__text {
   margin: 0;
-  font-size: $font-size__title--big;
+  font-size: $font-size-bigger;
   font-weight: 100;
   line-height: 1.2em;
 }
 
 .offer__advantages {
-  background-color: $color-white-gray;
+  background-color: $color-smokewhite-lighter;
   margin-top: 32px;
   padding-top: 54px;
   position: relative;
@@ -44,8 +44,8 @@
 }
 
 .offer__item-title {
-  font-size: $font-size__title;
-  line-height: $font-size__title;
+  font-size: $font-size-small;
+  line-height: $font-size-small;
   font-weight: 600;
   color: $color-black;
 }
@@ -58,7 +58,7 @@
   background-repeat: no-repeat;
   background-position: center 425px;
 
-  @media (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 1.5dppx) {
+  @media (min-width: $mobile-width) and (min-resolution: 144dpi), (min-width: $mobile-width) and (min-resolution: 1.5dppx) {
     background-image: url("../img/iphone-screen-mobile@2x.png");
     background-size: 157px, 320px;
   }
@@ -71,14 +71,14 @@
 
 .offer__item > .offer__effect-title {
   display: block;
-  font-size: $font-size__title;
-  line-height: $font-size__title;
+  font-size: $font-size-small;
+  line-height: $font-size-small;
 }
 
 .offer__item > .offer__item-text {
   margin-bottom: 35px;
-  font-size: $font-size__text--more;
-  line-height: $font-size__title--big;
+  font-size: $font-size-smaller;
+  line-height: $font-size-bigger;
 }
 
 .offer__item:last-child > .offer__item-text {
@@ -100,7 +100,7 @@
 }
 
 .offer__effect-title {
-  font-size: $font-size__text--big;
+  font-size: $font-size-extrabig;
   line-height: 36px;
   color: $color-black;
   margin-bottom: 17px;
@@ -108,17 +108,22 @@
 }
 
 .offer__effect-description {
-  line-height: $font-size__title--big;
+  line-height: $font-size-bigger;
 }
 
 @media (min-width: $tablet-widths) {
+  .offer {
+    width: 660px;
+    margin: 0 auto;
+  }
+
   .offer__title {
-    padding-top: 50px;
+    padding-top: 49px;
     padding-bottom: 68px;
   }
 
   .offer__title > .offer__text {
-    font-size: $font-size__title--huge;
+    font-size: $font-size-huge;
     text-align: center;
   }
 
@@ -154,7 +159,7 @@
     background-position: left 20px bottom;
     text-align: left;
 
-    @media (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 1.5dppx) {
+    @media (min-width: $tablet-widths) and (min-resolution: 144dpi), (min-width: $tablet-widths) and (min-resolution: 1.5dppx) {
       background-image: url("../img/iphone-screen-3-tablet@2x.png");
       background-size: 269px, 481px;
     }
@@ -204,20 +209,20 @@
   }
 
   .offer__effect-link {
-    color: $color-red;
+    color: $color-pink;
 
     &:hover {
-      color: $color-background-gray;
+      color: $color-deepblue;
     }
 
     &:active {
-      color: $color-background-gray;
+      color: $color-deepblue;
       opacity: 0.3;
     }
 
-    &:focus{
-      color: $color-background-gray;
-      border-color: $color-background-gray;
+    &:focus {
+      color: $color-deepblue;
+      border-color: $color-deepblue;
       opacity: 0.3;
     }
   }
@@ -251,7 +256,7 @@
   }
 
   .offer__title > .offer__text {
-    font-size: $font-size__title--hugest;
+    font-size: $font-size-hugest;
   }
 
   .offer__list {
@@ -270,7 +275,7 @@
   }
 
   .offer__advantages {
-    background-color: $color-white-gray;
+    background-color: $color-smokewhite-lighter;
     margin-top: 32px;
     padding-top: 54px;
     position: relative;
@@ -291,8 +296,8 @@
   }
 
   .offer__item > .offer__item-text {
-    font-size: $font-size__title;
-    line-height: $font-size__text--big;
+    font-size: $font-size-small;
+    line-height: $font-size-extrabig;
     margin-bottom: 0;
     margin-top: 23px;
     padding-right: 2px;
@@ -335,7 +340,7 @@
       background-position-x: -23px;
     }
 
-    @media (min-width: 960px) and (min-resolution: 144dpi), (min-width: 960px) and (min-resolution: 1.5dppx) {
+    @media (min-width: $desktop-widths) and (min-resolution: 144dpi), (min-width: $desktop-widths) and (min-resolution: 1.5dppx) {
       &::before {
         background-size: 292px 302px;
       }
@@ -372,8 +377,8 @@
   }
 
   .offer__item-title {
-    font-size: $font-size__text--big;
-    line-height: $font-size__text--big;
+    font-size: $font-size-extrabig;
+    line-height: $font-size-extrabig;
     font-weight: 600;
 
     &:nth-last-child(2) {
@@ -383,7 +388,7 @@
   }
 
   .offer__effect-block {
-    background-color: $color-white-gray;
+    background-color: $color-smokewhite-lighter;
   }
 
   .offer__effect-inner {
@@ -410,37 +415,37 @@
   .offer__effect-link {
     display: inline-block;
     height: 22px;
-    font-size: $font-size__title;
-    border-bottom: 1px solid $color-red;
+    font-size: $font-size-small;
+    border-bottom: 1px solid $color-pink;
     text-decoration: none;
 
     &:hover {
-      color: $color-background-gray;
-      border-color: $color-background-gray;
+      color: $color-deepblue;
+      border-color: $color-deepblue;
     }
 
-    &:focus{
-      color: $color-background-gray;
-      border-color: $color-background-gray;
+    &:focus {
+      color: $color-deepblue;
+      border-color: $color-deepblue;
       outline: none;
       opacity: 1;
     }
 
-     &:active {
+    &:active {
       opacity: 0.3;
     }
   }
 
   .offer__effect-title {
     width: 380px;
-    line-height: $font-size__text--big;
+    line-height: $font-size-extrabig;
     margin-bottom: 24px;
   }
 
   .offer__effect-description {
     width: 550px;
-    font-size: $font-size__title;
-    line-height: $font-size__text--big;
+    font-size: $font-size-small;
+    line-height: $font-size-extrabig;
     margin-bottom: 33px;
   }
 }

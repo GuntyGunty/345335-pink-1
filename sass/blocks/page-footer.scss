@@ -40,18 +40,25 @@
 }
 
 .page-footer__logo-link {
+  font-size: 0;
   outline: none;
 }
 
 .page-footer__logo-link:focus > .page-footer__logo-img {
-  fill: $color-red;
+  fill: $color-pink;
+  outline: none;
+}
+
+.page-footer__logo-link:active > .page-footer__logo-img {
+  fill: $color-deepblue-darkest;
+  opacity: 0.3;
   outline: none;
 }
 
 .page-footer__logo-img {
   display: block;
   margin: 0 auto;
-  fill: $color-dark-gray;
+  fill: $color-deepblue-darkest;
 
   &--mobile {
     display: block;
@@ -62,43 +69,17 @@
   }
 
   &:hover {
-    fill: $color-red;
+    fill: $color-pink;
   }
 
   &:focus {
-    fill: $color-red;
+    fill: $color-pink;
   }
 
   &:active {
-    fill: $color-dark-gray;
+    fill: $color-deepblue-darkest;
     opacity: 0.3;
   }
-}
-
-.page-footer__logo-img-letter {
-  fill: $color-background-gray;
-}
-
-.page-footer__logo-img-glasses {
-  fill: $color-red;
-}
-
-.page-footer__logo-img:hover .page-footer__logo-img-letter {
-  fill: $color-red;
-}
-
-.page-footer__logo-img:hover .page-footer__logo-img-glasses {
-  fill: $color-red;
-}
-
-.page-footer__logo-img:active .page-footer__logo-img-letter {
-  fill: $color-background-gray;
-  opacity: 0.3;
-}
-
-.page-footer__logo-img:active .page-footer__logo-img-glasses {
-  fill: $color-red;
-  opacity: 0.3;
 }
 
 .page-footer__social {
@@ -121,7 +102,7 @@
   width: 51px;
   height: 51px;
   transform: translateX(50%);
-  border: 3px solid $color-red-4;
+  border: 3px solid $color-common-light;
   border-radius: 50%;
   transition: all 0.25s;
   text-align: center;
@@ -151,7 +132,7 @@
   }
 
   &:active {
-    border-color: $color-red-4;
+    border-color: $color-common-light;
     opacity: 0.3;
   }
 
@@ -165,7 +146,7 @@
 .page-footer__social-img {
   vertical-align: middle;
   align-items: center;
-  fill: $color-red;
+  fill: $color-pink;
   overflow: hidden;
 
   &:active {
@@ -184,7 +165,7 @@
 }
 
 .page-footer__copyright-text {
-  color: $color-light-gray;
+  color: $color-deepblue-light;
   margin: 0;
   padding-right: 14px;
   margin-bottom: 7px;
@@ -215,7 +196,7 @@
 
 .page-footer__copyright-img {
   outline: none;
-  fill: $color-red;
+  fill: $color-pink;
 }
 
 @media (min-width: $tablet-widths) {
@@ -295,8 +276,8 @@
 
   .page-footer__wrapper {
     max-width: 940px;
-    padding-top: 55px;
-    padding-bottom: 55px;
+    padding-top: 54px;
+    padding-bottom: 54px;
     padding-left: 10px;
     padding-right: 10px;
 
@@ -324,18 +305,18 @@
   .page-footer__logo-img {
     display: block;
     margin: 0 auto;
-    fill: $color-dark-gray;
+    fill: $color-deepblue-darkest;
 
     &--mobile {
       display: none;
     }
 
     &:hover {
-      fill: $color-red;
+      fill: $color-pink;
     }
 
     &:active {
-      fill: $color-dark-gray;
+      fill: $color-deepblue-darkest;
       opacity: 0.3;
     }
   }
@@ -375,7 +356,7 @@
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 6px;
-    font-size: $font-size__title;
+    font-size: $font-size-small;
     line-height: 18px;
   }
 

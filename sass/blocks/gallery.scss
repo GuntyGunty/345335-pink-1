@@ -7,20 +7,16 @@
 .gallery__item {
   margin-bottom: 20px;
 
-  // &:nth-child(1) .photo__text {
-  //   margin-bottom: 9px;
-  // }
-
   &:nth-child(4) .photo__wrapper {
-    padding-top: 17px;
+    padding-top: 18px;
   }
 
   &:nth-child(5) .photo__wrapper {
-    padding-top: 17px;
+    padding-top: 18px;
   }
 
-  &:last-child {
-    margin-bottom: 0;
+  &:nth-child(6) .photo__wrapper {
+    padding-top: 20px;
   }
 
   &:nth-child(4) {
@@ -38,7 +34,7 @@
     margin-bottom: 20px;
 
     &:nth-child(1) .photo__text {
-      margin-bottom: 12px;
+      margin-bottom: 13px;
     }
 
     &:nth-child(4) .photo__wrapper {
@@ -78,6 +74,10 @@
 
   .gallery__item {
     margin-bottom: 20px;
+
+    // &:nth-child(1) .photo__text {
+    //   margin-bottom: 13px;
+    // }
 
     &:nth-child(5) .photo__wrapper {
       padding-top: 25px;

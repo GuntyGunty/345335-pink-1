@@ -4,9 +4,9 @@
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat, no-repeat;
-  background-color: $color-gray-2;
-  background-size: 259px, 704px;
-  background-position: left 178px, center top;
+  background-color: $color-deepblue-extradark;
+  background-size: 259px, 704px 464px;
+  background-position: left 109px, center top -68px;
 }
 
 .banner__index {
@@ -16,23 +16,23 @@
     background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
   }
 
-  @media (min-width: 660px) and (min-resolution: 144dpi),
-    (min-width: 660px) and (min-resolution: 1.5dppx) {
+  @media (min-width: $tablet-widths) and (min-resolution: 144dpi),
+    (min-width: $tablet-widths) and (min-resolution: 1.5dppx) {
     background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
   }
 
-  @media (min-width: 960px) and (min-resolution: 144dpi),
-    (min-width: 960px) and (min-resolution: 1.5dppx) {
+  @media (min-width: $desktop-widths) and (min-resolution: 144dpi),
+    (min-width: $desktop-widths) and (min-resolution: 1.5dppx) {
     background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
   }
 }
 
 .banner__photo-page {
-  min-height: 240px;
+  min-height: 170px;
 }
 
 .banner__inner {
-  padding-top: 468px;
+  padding-top: 399px;
 
   &--photo {
     width: 240px;
@@ -51,35 +51,29 @@
   color: $color-white;
   align-self: center;
   text-align: center;
-  font-size: $font-size__title--big;
-  line-height: $font-size__text--big;
+  font-size: $font-size-bigger;
+  line-height: $font-size-bigger;
   margin: 0;
   font-weight: 100;
 
   &--photo {
-    font-size: $font-size__title--big;
+    font-size: $font-size-bigger;
     font-weight: 300;
-    width: 250px;
-    line-height: $font-size__text--big;
-    padding-top: 17px;
+    line-height: $font-size-extrabig;
+    padding-bottom: 50px;
   }
 
   &--form {
-    width: 250px;
-    padding-top: 47px;
+    width: 289px;
+    font-size: $font-size-bigger;
+    font-weight: 100;
+    padding-bottom: 23px;
+    line-height: 1.25em;
   }
 }
 
-.banner-title--form {
-  width: 289px;
-  font-size: $font-size__title--big;
-  font-weight: 100;
-  line-height: 1.25em;
-  padding-top: 46px;
-}
-
 .banner__form-page {
-  min-height: 239px;
+  min-height: 170px;
 }
 
 .banner__form-page,
@@ -90,22 +84,22 @@
     background-image: none, url("../img/bg-back-mobile@2x.jpg");
   }
 
-  @media (min-width: 660px) and (min-resolution: 144dpi),
-    (min-width: 660px) and (min-resolution: 1.5dppx) {
+  @media (min-width: $tablet-widths) and (min-resolution: 144dpi),
+    (min-width: $tablet-widths) and (min-resolution: 1.5dppx) {
     background-image: none, url("../img/bg-back-tablet@2x.jpg");
     background-size: 1200px 680px;
   }
 
-  @media (min-width: 960px) and (min-resolution: 144dpi),
-    (min-width: 960px) and (min-resolution: 1.5dppx) {
+  @media (min-width: $desktop-widths) and (min-resolution: 144dpi),
+    (min-width: $desktop-widths) and (min-resolution: 1.5dppx) {
     background-image: none, url("../img/bg-back-desktop@2x.jpg");
-    background-size: 2530px;
+    background-size: 2555px;
   }
 }
 
 @media (min-width: 330px) and (max-width: $tablet-widths) {
   .banner__index {
-    background-position: center 177px, center top;
+    background-position: left 109px, center top -68px;
   }
 }
 
@@ -117,23 +111,26 @@
   }
 
   .banner__form-page {
+    background-image: none, url("../img/bg-back-tablet@1x.jpg");
     background-size: 1189px 729px;
+    background-position: center top -110px;
     padding-top: 0;
-    min-height: 439px;
+    min-height: 330px;
   }
 
   .banner__photo-page {
-    background-position: center top;
-    background-size: 181%;
+    background-image: none, url("../img/bg-back-tablet@1x.jpg");
+    background-position: center top -110px;
+    background-size: 1193px 729px;
     padding-top: 55px;
-    min-height: 383px;
+    min-height: 273px;
   }
 
   .banner__index {
-    padding-top: 189px;
+    padding-top: 80px;
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
-    background-position: center bottom, center top;
-    background-size: 700px, cover;
+    background-position: center bottom, center top -113px;
+    background-size: 700px, 1204px 734px;
     min-height: 440px;
   }
 
@@ -148,7 +145,7 @@
 
   .banner__title {
     display: inline-block;
-    font-size: $font-size__title--hugest;
+    font-size: $font-size-hugest;
     margin: 0 auto;
     line-height: 1.2em;
     text-align: center;
@@ -156,12 +153,12 @@
     font-weight: 300;
 
     &--photo {
-      padding-bottom: 15px;
+      padding-bottom: 125px;
     }
 
     &--form {
       width: 500px;
-      padding-top: 99px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -194,23 +191,26 @@
   .banner__form-page,
   .banner__photo-page {
     padding-top: 53px;
-    background-size: 2550px;
-    background-position: bottom right 4px, center top 13px;
+    background-size: 2555px;
+    background-image: none, url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top;
     min-height: 340px;
   }
 
   .banner__title {
     width: 800px;
-    font-size: $font-size__title--hugest;
+    font-size: $font-size-hugest;
     font-weight: 300;
     background: none;
 
     &--photo {
       width: 600px;
+      padding-bottom: 15px;
     }
 
     &--form {
       padding-top: 21px;
+      margin: 0;
     }
   }
 }
@@ -225,6 +225,10 @@
     padding-top: 53px;
     background-size: cover;
     background-image: none, url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: none, url("../img/bg-back-desktop@2x.jpg");
+    }
     background-position: center top 5px;
     min-height: 339px;
   }

@@ -37,7 +37,7 @@
 .modal-block__title {
   display: block;
   text-align: center;
-  font-size: $font-size__title;
+  font-size: $font-size-small;
   font-weight: 700;
   line-height: 24px;
 }
@@ -57,7 +57,7 @@
   display: block;
   margin: 0 auto;
   padding-top: 17px;
-  font-size: $font-size__title;
+  font-size: $font-size-small;
   padding-right: 10px;
   padding-bottom: 17px;
   padding-left: 10px;
@@ -69,21 +69,21 @@
   cursor: pointer;
 
   &:hover {
-    background-color: $color-green-2;
+    background-color: $color-green-dark;
   }
 
   &:active {
-    color: $color-green-3;
+    color: $color-green-light;
     outline: none;
   }
 
   &:disabled {
-    background-color: $color-gray-3;
+    background-color: $color-green-light;
   }
 }
 
 .modal-block__inner {
-  background-color: $color-white-gray;
+  background-color: $color-smokewhite-lighter;
   padding-top: 50px;
   padding-right: 0;
   padding-bottom: 50px;
@@ -183,7 +183,7 @@
     left: 50%;
     padding-left: 177px;
     padding-right: 180px;
-    background-image: linear-gradient(to bottom, $color-white 214px, $color-white-gray 163px);
+    background-image: linear-gradient(to bottom, $color-white 214px, $color-smokewhite-lighter 163px);
   }
 
   .modal-block__btn--success {
@@ -195,12 +195,13 @@
   .modal-block {
     &--success {
       top: 50%;
-      left: 15%;
+      margin-left: 25%;
     }
 
     &--failure {
       top: 50%;
-      left: 25%;
+      margin-left: 20%;
     }
   }
 }
+

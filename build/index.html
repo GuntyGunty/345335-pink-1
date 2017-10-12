@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Pink</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
@@ -168,6 +168,7 @@
       <div class="page-header__wrapper">
         <div class="page-header__inner">
           <a class="page-header__logo-item" tabindex="0" href="index.html">
+            Логотип Pink
             <svg class="page-header__logo-img page-header__logo-img--mobile" width="75" height="22">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use>
             </svg>
@@ -178,20 +179,20 @@
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop"></use>
             </svg>
           </a>
-          <button class="page-header__btn-close  page-header__toggle" tabindex="0" type="button" aria-label="Закрыть меню/Открыть меню">
+          <button class="page-header__btn-close  page-header__toggle" type="button" aria-label="Закрыть меню/Открыть меню">
             Кнопка открытия и закрытия меню
-            <svg class="page-header__img-btn-close" width="23.867px" height="23.867px">
+            <svg class="page-header__img-btn-close" tabindex="0" width="23.867px" height="23.867px">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-cross-pink"></use>
             </svg>
-            <svg class="page-header__img-btn-open" width="49.945px" height="24.007px">
+            <svg class="page-header__img-btn-open" tabindex="0" width="49.945px" height="24.007px">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-burger"></use>
             </svg>
           </button>
         </div>
         <ul class="page-header__list">
           <li class="page-header__item page-header__item--active">
-            <a class="page-header__link" href="index.html">
-                <span class="page-header__text page-header__text--active">Главная</span>
+            <a class="page-header__link page-header__link--active" href="index.html">
+              <span class="page-header__text page-header__text--active">Главная</span>
             </a>
           </li>
           <li class="page-header__item">
@@ -222,9 +223,9 @@
           </div>
           <a class="download__btn" href="https://itunes.apple.com">Скачать приложение</a>
           <div class="download__links">
-            <a href="https://itunes.apple.com" class="download__link download__link--apple">apple</a>
-            <a href="https://play.google.com" class="download__link download__link--android">android</a>
-            <a href="https://microsoft.com/store/apps/windows-phone" class="download__link download__link--windows">windows phone</a>
+            <a href="https://itunes.apple.com" class="download__link download__link--apple">Скачать для Apple</a>
+            <a href="https://play.google.com" class="download__link download__link--android">Скачать для Android</a>
+            <a href="https://microsoft.com/store/apps/windows-phone" class="download__link download__link--windows">Скачать для Windows phone</a>
           </div>
           <p class="download__text">
             Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
@@ -259,7 +260,8 @@
         <div class="offer__effect-block">
           <div class="offer__effect-inner container">
             <h3 class="offer__effect-title">Эффект на&#160;24&#160;часа!</h3>
-            <p class="offer__effect-description">Британские ученые провели исследования и доказали, что&#160;положительный эффект от&#160;использования приложения
+            <p class="offer__effect-description">
+              Британские ученые провели исследования и доказали, что&#160;положительный эффект от&#160;использования приложения
               длится целые&#160;сутки!
             </p>
             <a class="offer__effect-link" href="#">Узнать больше об исследовании</a>
@@ -300,15 +302,15 @@
             <span class="slider__pagination-item"></span>
             <span class="slider__pagination-item"></span>
           </div>
-          <button class="slider__arrow slider__arrow--last" tabindex="0">
+          <button class="slider__arrow slider__arrow--last" tabindex="0" aria-label="Показать левый слайд">
               Показать левый слайд
-              <svg  class="slider__arow-right" width="21.706px" height="41.719px">
+              <svg class="slider__arow-right" width="21.706px" height="41.719px">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-review-arrow-left"></use>
               </svg>
-          </button>      
-          <button class="slider__arrow slider__arrow--next" tabindex="0">
+          </button>
+          <button class="slider__arrow slider__arrow--next" tabindex="0" aria-label="Показать правый слайд">
               Показать правый слайд
-              <svg  class="slider__arow-right" width="21.706px" height="41.719px">
+              <svg class="slider__arow-right" width="21.706px" height="41.719px">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-review-arrow-right"></use>
               </svg>
           </button>
@@ -368,6 +370,7 @@
             <span class="slider__pagination-item"></span>
           </div>
         </div>
+        <a class="packets__link" href="#">Посмотреть полный прайс-лист</a>
       </section>
     </div>
     <section class="contacts">
@@ -395,7 +398,8 @@
   </main>
   <footer class="page-footer page-footer--index">
     <div class="page-footer__wrapper">
-      <a class="page-footer__logo-link" href="#">
+      <a class="page-footer__logo-link" href="index.html">
+        Логотип Pink
         <svg class="page-footer__logo-img  page-footer__logo-img--mobile" width="146.3px" height="40.375px">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-mobile"></use>
         </svg>
@@ -404,7 +408,7 @@
         </svg>
       </a>
       <div class="page-footer__social">
-        <h3 class="visually-hidden">Социальные кнопки</h3>
+        <h3 class="visually-hidden">Присоединяйтесь к нам в социальных сетях</h3>
         <a class="page-footer__social-item page-footer__social-item--twitter" href="https://twitter.com/?lang=en">
           <span class="visually-hidden">Twitter</span>
         </a>
@@ -419,11 +423,14 @@
         <span class="page-footer__copyright-text">Разработано</span>
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Разработано командой HTML Academy</span>
-          <svg class="page-footer__copyright-img" width="26.943px" height="34.09px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
+          <svg class="page-footer__copyright-img" width="26.943px" height="34.09px">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
   </footer>
+  <script src="js/removeno.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/google-map.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX5WYsszhD50CHJ5wMpWp5Cn8eY3mjOio&callback=initMap"></script>

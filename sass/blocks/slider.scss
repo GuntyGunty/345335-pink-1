@@ -36,7 +36,7 @@
   height: 6px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: $color-gray-5;
+  background-color: $color-gray-extralight;
   margin-right: 19px;
 
   &:nth-child(1) {
@@ -48,15 +48,15 @@
   }
 
   &:hover {
-    background-color: $color-gray-6;
+    background-color: $color-gray-dark;
   }
 
   &:active {
-    background-color: $color-red-4;
+    background-color: $color-common-light;
   }
 
   &--active {
-    border: 3px solid $color-background-gray;
+    border: 3px solid $color-deepblue;
     background-color: $color-white;
     cursor: default;
   }
@@ -64,7 +64,7 @@
 
 .slider__pagination-item--active:hover {
   cursor: default;
-  border: 3px solid $color-background-gray;
+  border: 3px solid $color-deepblue;
   background-color: $color-white;
 }
 

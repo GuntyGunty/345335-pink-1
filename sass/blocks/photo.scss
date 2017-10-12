@@ -26,10 +26,36 @@
   }
 }
 
+.photo__link {
+  width: 280px;
+  height: 180px;
+}
+
 .photo__img,
 .photo__link {
   width: 280px;
   height: 180px;
+}
+
+.photo__link--wide {
+  background-image: url("../img/panorama-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/panorama-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-widths) and (min-resolution: 144dpi),
+    (min-width: $tablet-widths) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/panorama-tablet@2x.jpg");
+  }
+
+  @media (min-width: $desktop-widths) and (min-resolution: 144dpi),
+    (min-width: $desktop-widths) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/panorama-desktop@2x.jpg.png");
+  }
 }
 
 .photo__img--wide,
@@ -48,7 +74,7 @@
   margin: 0;
   top: 0;
   right: 20px;
-  background-color: $color-red;
+  background-color: $color-pink;
   box-sizing: border-box;
   z-index: 1;
 }
@@ -56,7 +82,7 @@
 .photo__label-text {
   text-align: center;
   margin: 0;
-  font-size: $font-size__text--small;
+  font-size: $font-size-extrasmall;
   font-weight: 700;
   line-height: 24px;
   color: $color-white;
@@ -75,7 +101,7 @@
   margin: 0 auto;
   box-sizing: border-box;
   flex-grow: 1;
-  background-color: $color-white-gray;
+  background-color: $color-smokewhite-lighter;
 
   &--wide {
     max-width: $mobile-width;
@@ -112,15 +138,11 @@
 
 .photo__text {
   max-width: 246px;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
   margin-top: 0;
   line-height: 24px;
-  color: $color-gray-font;
+  color: $color-deepblue-dark;
 }
-
-// .photo__inner .photo__wrapper:nth-child(1) .photo__text {
-//   margin-bottom: 9px;
-// }
 
 .photo__like-block {
   display: flex;
@@ -145,14 +167,14 @@
 
 .photo__count {
   margin-left: 20px;
-  font-size: $font-size__text--small;
+  font-size: $font-size-extrasmall;
   line-height: 24px;
   text-transform: uppercase;
-  color: $color-red;
+  color: $color-pink;
 }
 
 .photo__icon {
-  fill: $color-red;
+  fill: $color-pink;
   transition: all 0.25s;
 
   &:focus {
@@ -161,15 +183,15 @@
 }
 
 .photo__like:hover .photo__icon {
-  fill: $color-background-gray;
+  fill: $color-deepblue;
 }
 
 .photo__like:focus .photo__icon {
-  fill: $color-background-gray;
+  fill: $color-deepblue;
 }
 
 .photo__like:active .photo__icon {
-  fill: $color-background-gray;
+  fill: $color-deepblue;
   opacity: 0.3;
 }
 
@@ -210,6 +232,11 @@
     }
   }
 
+  .photo__link {
+    width: 300px;
+    height: 300px;
+  }
+
   .photo__img,
   .photo__link {
     width: 300px;
@@ -219,6 +246,12 @@
       width: 660px;
       height: 508px;
     }
+  }
+
+  .photo__link--wide {
+    background-size: 700px;
+    background-position-x: -20px;
+    background-image: url("../img/panorama-tablet@1x.jpg");
   }
 
   .photo__wrapper {
@@ -264,7 +297,7 @@
 
   .photo__like-block {
     justify-content: space-between;
-    width: 240px;
+    width: 239px;
 
     &--wide {
       width: 243px;
@@ -281,7 +314,6 @@
   .photo__like {
     order: 2;
     margin-bottom: 3px;
-    margin-left: 11px;
   }
 
   .photo__count {
@@ -319,13 +351,21 @@
     right: 10px;
   }
 
+  .photo__link {
+    height: 400px;
+  }
+
   .photo__img,
   .photo__link {
     height: 400px;
+    width: 300px;
 
     &--wide {
       min-width: 960px;
       height: 506px;
+      background-size: cover;
+      background-position-x: -121px;
+      background-image: url("../img/panorama-desktop@1x.jpg");
     }
   }
 
@@ -336,7 +376,7 @@
 
   .photo__wrapper {
     padding-top: 24px;
-    padding-right: 27px;
+    padding-right: 0;
     padding-bottom: 22px;
     padding-left: 27px;
 
@@ -355,16 +395,12 @@
   .photo__text--wide {
     width: 885px;
     max-width: 885px;
-
-    &--wide {
-      max-width: 620px;
-      margin-top: -2px;
-      order: 3;
-    }
+    margin-top: -2px;
+    order: 3;
   }
 
   .photo__like-block {
-    width: 239px;
+    width: 242px;
 
     &--wide {
       width: 243px;
@@ -374,6 +410,10 @@
   .photo__like-block--wide .photo__count {
     margin-left: 115px;
     padding-top: 0;
+  }
+
+  .photo__like {
+    padding: 0;
   }
 
   .photo__like-block--wide .photo__like {

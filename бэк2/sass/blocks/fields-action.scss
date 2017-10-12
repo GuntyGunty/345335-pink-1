@@ -1,0 +1,82 @@
+.field-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+.field-action__btn {
+  padding-top: 17px;
+  padding-right: 49px;
+  padding-bottom: 17px;
+  padding-left: 47px;
+  font-size: $font-size-small;
+  font-weight: 600;
+  transition: all 0.25s;
+  border-radius: 5px;
+
+  @include reset-button-style;
+  text-transform: uppercase;
+  line-height: $font-size-extrabig;
+  background-color: $color-green;
+  color: $color-white;
+  cursor: pointer;
+
+   &:hover {
+    background-color: $color-green-dark;
+  }
+
+  &:active {
+    color: $color-green-light;
+  }
+
+  &:focus {
+    background-color: $color-green-dark;
+    color: $color-green-light
+  }
+
+  &:disabled {
+    background-color: $color-smokewhite;
+  }
+}
+
+.field-action__text {
+  margin: 40px 0 20px;
+  text-transform: uppercase;
+}
+
+.field-action__index {
+  color: $color-pink;
+}
+
+.field-action__hidden {
+  display: none;
+}
+
+@media (min-width: $tablet-widths) {
+  .field-action {
+    flex-direction: row;
+    width: 620px;
+  }
+
+  .field-action__btn {
+    width: 300px;
+    margin: 0;
+  }
+
+  .field-action__text {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-widths) {
+  .field-action {
+    width: $desktop-widths;
+  }
+
+  .field-action__hidden {
+    display: inline-block;
+  }
+}

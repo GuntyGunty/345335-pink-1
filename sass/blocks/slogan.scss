@@ -8,7 +8,7 @@
   margin-bottom: 17px;
 
   &--photo {
-    padding-top: 45px;
+    padding-top: 46px;
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
@@ -26,7 +26,7 @@
 
 .slogan__title {
   margin: 0;
-  font-size: $font-size__title--big;
+  font-size: $font-size-bigger;
   font-weight: 100;
 
   &:first-child {
@@ -37,8 +37,8 @@
 .slogan__text {
   width: 250px;
   margin: 0 auto;
-  font-size: $font-size__text--more;
-  line-height: $font-size__text--big;
+  font-size: $font-size-smaller;
+  line-height: $font-size-extrabig;
 
   &--form {
     width: 280px;
@@ -60,7 +60,7 @@
     &--form {
       padding-top: 91px;
       padding-right: 0;
-      padding-bottom: 19px;
+      padding-bottom: 18px;
       padding-left: 0;
     }
 
@@ -70,7 +70,7 @@
   }
 
   .slogan__title {
-    font-size: $font-size__title--huge;
+    font-size: $font-size-huge;
     text-align: center;
 
     &:first-child {
@@ -81,8 +81,8 @@
 
   .slogan__text {
     width: 490px;
-    font-size: $font-size__title;
-    line-height: $font-size__text--big;
+    font-size: $font-size-small;
+    line-height: $font-size-extrabig;
   }
 
   .slogan__text-span {
@@ -106,7 +106,7 @@
   }
 
   .slogan__title {
-    font-size: $font-size__title--hugest;
+    font-size: $font-size-hugest;
 
     &:nth-last-child(1) {
       width: 490px;
@@ -116,8 +116,8 @@
 
   .slogan__text {
     width: 800px;
-    font-size: $font-size__title;
-    line-height: $font-size__text--big;
+    font-size: $font-size-small;
+    line-height: $font-size-extrabig;
   }
 
   .slogan__text--small {

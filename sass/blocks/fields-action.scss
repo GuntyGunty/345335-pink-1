@@ -8,34 +8,37 @@
 }
 
 .field-action__btn {
-  padding: 17px 49px 17px 47px;
-  font-size: $font-size__title;
+  padding-top: 17px;
+  padding-right: 49px;
+  padding-bottom: 17px;
+  padding-left: 47px;
+  font-size: $font-size-small;
   font-weight: 600;
   transition: all 0.25s;
   border-radius: 5px;
 
   @include reset-button-style;
   text-transform: uppercase;
-  line-height: $font-size__text--big;
+  line-height: $font-size-extrabig;
   background-color: $color-green;
   color: $color-white;
   cursor: pointer;
 
-   &:hover {
-    background-color: $color-green-2;
+  &:hover {
+    background-color: $color-green-dark;
   }
 
   &:active {
-    color: $color-green-3;
+    color: $color-green-light;
   }
 
   &:focus {
-    background-color: $color-green-2;
-    color: $color-green-3
+    background-color: $color-green-dark;
+    color: $color-green-light;
   }
 
   &:disabled {
-    background-color: $color-gray-3;
+    background-color: $color-smokewhite;
   }
 }
 
@@ -45,7 +48,7 @@
 }
 
 .field-action__index {
-  color: $color-red;
+  color: $color-pink;
 }
 
 .field-action__hidden {

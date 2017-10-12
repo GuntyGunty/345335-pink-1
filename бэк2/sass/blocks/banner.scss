@@ -1,0 +1,230 @@
+.banner {
+  display: flex;
+  min-height: 237px;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat, no-repeat;
+  background-color: $color-deepblue-extradark;
+  background-size: 259px, 704px;
+  background-position: left 178px, center top;
+}
+
+.banner__index {
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  @media (min-width: 660px) and (min-resolution: 144dpi),
+    (min-width: 660px) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+  }
+
+  @media (min-width: 960px) and (min-resolution: 144dpi),
+    (min-width: 960px) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
+  }
+}
+
+.banner__photo-page {
+  min-height: 240px;
+}
+
+.banner__inner {
+  padding-top: 468px;
+
+  &--photo {
+    width: 240px;
+    padding-top: 0;
+  }
+}
+
+.intro__img {
+  position: absolute;
+  top: 176px;
+  left: 0;
+  font-size: 0;
+}
+
+.banner__title {
+  color: $color-white;
+  align-self: center;
+  text-align: center;
+  font-size: $font-size-bigger;
+  line-height: $font-size-extrabig;
+  margin: 0;
+  font-weight: 100;
+
+  &--photo {
+    font-weight: 300;
+    font-size: $font-size-bigger;
+    line-height: $font-size-extrabig;
+    padding-top: 17px;
+  }
+
+  &--form {
+    width: 250px;
+    padding-top: 47px;
+  }
+}
+
+.banner-title--form {
+  width: 289px;
+  font-size: $font-size-bigger;
+  font-weight: 100;
+  line-height: 1.25em;
+  padding-top: 46px;
+}
+
+.banner__form-page {
+  min-height: 239px;
+}
+
+.banner__form-page,
+.banner__photo-page {
+  background-image: none, url("../img/bg-back-mobile@1x.jpg");
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: none, url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  @media (min-width: 660px) and (min-resolution: 144dpi),
+    (min-width: 660px) and (min-resolution: 1.5dppx) {
+    background-image: none, url("../img/bg-back-tablet@2x.jpg");
+    background-size: 1200px 680px;
+  }
+
+  @media (min-width: 960px) and (min-resolution: 144dpi),
+    (min-width: 960px) and (min-resolution: 1.5dppx) {
+    background-image: none, url("../img/bg-back-desktop@2x.jpg");
+    background-size: 2530px;
+  }
+}
+
+@media (min-width: 330px) and (max-width: $tablet-widths) {
+  .banner__index {
+    background-position: center 177px, center top;
+  }
+}
+
+@media (min-width: $tablet-widths) {
+  .banner {
+    padding-top: 184px;
+    background-position: center top;
+    min-height: 440px;
+  }
+
+  .banner__form-page {
+    background-size: 1189px 729px;
+    padding-top: 0;
+    min-height: 439px;
+  }
+
+  .banner__photo-page {
+    background-position: center top;
+    background-size: 181%;
+    padding-top: 55px;
+    min-height: 383px;
+  }
+
+  .banner__index {
+    padding-top: 190px;
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+    background-position: center bottom, center top;
+    background-size: 700px, cover;
+    min-height: 440px;
+  }
+
+  .banner__inner {
+    padding-top: 0;
+    padding-right: 2px;
+
+    &--photo {
+      width: auto;
+    }
+  }
+
+  .banner__title {
+    display: inline-block;
+    font-size: $font-size-hugest;
+    margin: 0 auto;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 0;
+    font-weight: 300;
+
+    &--photo {
+      padding-bottom: 15px;
+    }
+
+    &--form {
+      width: 500px;
+      padding-top: 99px;
+    }
+  }
+}
+
+@media (min-width: $desktop-widths) {
+  .banner {
+    background-size: 1050px, cover;
+    background-position: bottom right 4px, center top;
+  }
+
+  .banner__index {
+    min-height: auto;
+    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
+    background-position: bottom right -115px, center top -1px;
+    padding-top: 135px;
+  }
+
+  .banner__inner {
+    padding-top: 20px;
+    padding-right: 360px;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .banner__inner--photo {
+    padding-right: 0;
+    padding-top: 37px;
+  }
+
+  .banner__form-page,
+  .banner__photo-page {
+    padding-top: 53px;
+    background-size: 2550px;
+    background-position: bottom right 4px, center top 13px;
+    min-height: 340px;
+  }
+
+  .banner__title {
+    width: 800px;
+    font-size: $font-size-hugest;
+    font-weight: 300;
+    background: none;
+
+    &--photo {
+      width: 600px;
+    }
+
+    &--form {
+      padding-top: 21px;
+    }
+  }
+}
+
+@media (min-width: $large-desktop) {
+  .banner__index {
+    background-position: bottom right 290px, center top -1px;
+  }
+
+  .banner__form-page,
+  .banner__photo-page {
+    padding-top: 53px;
+    background-size: cover;
+    background-image: none, url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top 5px;
+    min-height: 339px;
+  }
+}

@@ -1,106 +1,158 @@
-`use strict`;
+"use strict";
 
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const plumber = require('gulp-plumber');
-const postcss = require('gulp-postcss');
-const run = require('run-sequence');
-const rename = require('gulp-rename');
-const svgstore = require('gulp-svgstore');
-const imagemin = require('gulp-imagemin');
-const svgmin = require('gulp-svgmin');
-const del = require('del');
-const uglify = require('gulp-uglify');
-const minify = require('gulp-csso');
-const csscomb = require('gulp-csscomb');
-const autoprefixer = require('autoprefixer');
-const server = require('browser-sync').create();
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var plumber = require("gulp-plumber");
+var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
+var mqpacker = require("css-mqpacker");
+var server = require("browser-sync").create();
+var cleanCSS = require("gulp-clean-css");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var svgstore = require("gulp-svgstore");
+var svgmin = require("gulp-svgmin");
+var run = require("run-sequence");
+var del = require("del");
+var cwebp = require("gulp-cwebp");
+var rollup = require('gulp-better-rollup');
+var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
+var babel = require('rollup-plugin-babel');
+var nodeResolve = require('rollup-plugin-node-resolve');
+var commonJS = require('rollup-plugin-commonjs');
+var polyfill = require('babel-polyfill');
 
-gulp.task('clean', function () {
-  return del('build');
+gulp.task("clean", function() {
+  return del("build");
 });
 
-gulp.task('copy', function() {
+gulp.task("copy", function() {
   return gulp.src([
-    'fonts/**/*.{woff,woff2}',
-    'img/*.{svg,png,jpg,webp}',
-    'js/**',
-    '*.html'
+    "fonts/**/*.{woff,woff2}",
+    "js/google-map.js",
+    "img/*",
+    "*.html"
   ], {
-    base: '.'
+    base: "."
   })
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest("build"));
 });
 
-gulp.task('comb', function() {
-  gulp.src('sass/*.scss')
-    .pipe(csscomb())
-    .pipe(gulp.dest('sass/'))
-    .pipe(server.stream());
-});
-
-
-gulp.task('style', function() {
-  gulp.src('sass/style.scss')
+gulp.task("style", function() {
+  gulp.src("sass/style.scss")
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: require('node-normalize-scss').includePaths
+    }))
     .pipe(postcss([
       autoprefixer({browsers: [
         "last 2 versions",
-        "IE 11",
-        "Firefox ESR"
-      ]})
+        "last 2 Chrome versions",
+        "last 2 Firefox versions",
+        "last 2 Opera versions",
+        "last 2 Edge versions"
+      ]}),
+      mqpacker({
+        sort: true
+      })
     ]))
-    .pipe(gulp.dest('build/css'))
-    .pipe(minify())
-    .pipe(csscomb())
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest("build/css"))
+    .pipe(cleanCSS())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
-gulp.task('images', function() {
-  return gulp.src('build/img/**/*.{png,jpg}')
+gulp.task('scripts', function () {
+  return gulp.src('js/menu.js')
+  .pipe(plumber())
+  .pipe(sourcemaps.init())
+  .pipe(rollup(
+    {
+      plugins: [
+        nodeResolve(),
+        commonJS(),
+        babel({
+          babelrc: false,
+          exclude: 'node_modules/',
+          presets: [
+            ['env', {modules: false}]
+          ],
+          plugins: [
+            'external-helpers'
+          ]
+        })
+      ]
+    }, 'iife'))
+  .pipe(uglify())
+  .pipe(sourcemaps.write(''))
+  .pipe(gulp.dest('build/js/'));
+});
+
+gulp.task("images", function() {
+  return gulp.src("build/img/**/*.{png,jpg,gif}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true})
     ]))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest("build/img"));
 });
 
-gulp.task('symbols', function() {
-  return gulp.src('img/svg/*.svg')
-  .pipe(svgmin())
-  .pipe(gulp.dest('build/img/'))
+gulp.task("cwebp", function () {
+  gulp.src("build/img/**/*.{png,jpg,gif}")
+    .pipe(cwebp())
+    .pipe(gulp.dest("build/img"));
 });
 
+gulp.task("symbols", function() {
+  return gulp.src("build/img/*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("symbols.svg"))
+    .pipe(gulp.dest("build/img"));
+  });
 
-gulp.task('html:update', ['html:copy'], function(done) {
+gulp.task('copy-html', function () {
+  return gulp.src('*.html')
+    .pipe(gulp.dest('build'))
+    .pipe(server.stream());
+});
+
+gulp.task('js-watch', ['scripts'], function (done) {
   server.reload();
   done();
 });
 
-gulp.task('serve', ['style'], function() {
+gulp.task("build", function(fn) {
+    run(
+      "clean",
+      "copy",
+      "style",
+      "scripts",
+      "images",
+      "cwebp",
+      "symbols",
+      fn
+    );
+  });
+
+gulp.task("serve", ["style"], function() {
   server.init({
-    server: 'build/',
+    server: "./build",
     notify: false,
     open: true,
-    cors: true,
+    port: 3502,
     ui: false
   });
 
-  gulp.watch('sass/**/*.{scss,sass}', ['style']);
-  gulp.watch('*.html').on('change', server.reload);
-});
-
-gulp.task('build', function(fn) {
-  run(
-    'clean',
-    'copy',
-    'comb',
-    'style',
-    'images',
-    'symbols',
-    // 'js',
-  fn);
+  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("js/**/*.js", ["scripts"]);
+  gulp.watch("*.html").on("change", (e) => {
+    if (e.type !== 'deleted') {
+      gulp.start('copy-html');
+    }
+  });
 });

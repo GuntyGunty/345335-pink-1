@@ -131,7 +131,6 @@
   left: 193px;
 }
 
-
 .presentation__tool-img {
   cursor: pointer;
   fill: $color-gray-lighter;
@@ -160,7 +159,6 @@
 
   &:focus {
     outline: none;
-    fill: $color-pink;
   }
 }
 
@@ -440,6 +438,24 @@
       height: 17px;
       margin-right: 32px;
       margin-left: 10px;
+    }
+  }
+
+  .presentation__tool-img--active {
+    fill: $color-pink;
+    cursor: default;
+
+    &:hover {
+      fill: $color-pink;
+    }
+
+    &:active {
+      fill: $color-deepblue-extralight;
+    }
+
+    &:focus {
+      outline: none;
+      fill: $color-deepblue-extralight;
     }
   }
 

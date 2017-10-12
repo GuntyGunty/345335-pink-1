@@ -93,6 +93,7 @@
   &:focus {
     background-color: $color-white;
     color: $color-pink;
+    outline: none;
   }
 
   &:active {

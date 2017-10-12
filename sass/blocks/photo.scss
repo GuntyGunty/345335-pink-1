@@ -43,18 +43,28 @@
   background-size: contain;
   font-size: 0;
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/panorama-mobile@2x.jpg");
+  @media (min-width: $mobile-width) {
+    background-image: url("../img/panorama-mobile@1x.jpg");
+
+    @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      background-image: none, url("../img/panorama-mobile@2x.jpg");
+    }
   }
 
-  @media (min-width: $tablet-widths) and (min-resolution: 144dpi),
-    (min-width: $tablet-widths) and (min-resolution: 1.5dppx) {
-    background-image: url("../img/panorama-tablet@2x.jpg");
+  @media (min-width: $tablet-widths) {
+    background-image: url("../img/panorama-tablet@1x.jpg");
+
+    @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      background-image: url("../img/panorama-tablet@2x.jpg");
+    }
   }
 
-  @media (min-width: $desktop-widths) and (min-resolution: 144dpi),
-    (min-width: $desktop-widths) and (min-resolution: 1.5dppx) {
-    background-image: url("../img/panorama-desktop@2x.jpg.png");
+  @media (min-width: $desktop-widths) {
+    background-image: url("../img/panorama-desktop@1x.jpg");
+
+    @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      background-image: url("../img/panorama-desktop@2x.jpg");
+    }
   }
 }
 
@@ -300,23 +310,32 @@
     width: 239px;
 
     &--wide {
-      width: 243px;
-      justify-content: center;
+      width: 220px;
       order: 1;
     }
   }
 
   .photo__like-block--wide .photo__count {
     padding-top: 2px;
-    margin-left: 117px;
+    margin-left: 99px;
   }
 
   .photo__like {
+    padding: 0;
+    margin-left: 0;
     order: 2;
     margin-bottom: 3px;
   }
 
   .photo__count {
+    margin-left: 0;
+  }
+
+  .photo__icon {
+    margin-left: 6px;
+  }
+
+  .photo__like-block--wide .photo__icon {
     margin-left: 0;
   }
 }
@@ -408,12 +427,16 @@
   }
 
   .photo__like-block--wide .photo__count {
-    margin-left: 115px;
+    margin-left: 120px;
     padding-top: 0;
   }
 
   .photo__like {
     padding: 0;
+  }
+
+  .photo__icon {
+    margin-left: 0;
   }
 
   .photo__like-block--wide .photo__like {

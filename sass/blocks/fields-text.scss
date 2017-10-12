@@ -480,10 +480,15 @@
 
   .fields-text__icon {
     height: 62px;
-    min-width: 62px;
+    min-width: 60px;
 
     &--mail {
       height: 63px;
+    }
+
+    &--phone {
+      height: 63px;
+      background-position-x: 18px;
     }
   }
 

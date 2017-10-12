@@ -17,7 +17,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 33px;
 }
 
 .download__link {
@@ -75,6 +74,7 @@
   padding-bottom: 15px;
   padding-left: 35px;
   display: block;
+  margin-bottom: 33px;
   text-decoration: none;
   color: $color-white;
   border: 3px solid $color-white;
@@ -131,7 +131,8 @@
   }
 
   .download__btn {
-    margin-bottom: 48px;
+    margin-bottom: 47px;
+    padding-bottom: 16px;
   }
 }
 

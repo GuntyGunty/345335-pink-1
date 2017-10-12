@@ -218,6 +218,10 @@
   cursor: pointer;
 }
 
+.page-header__btn-close:focus svg {
+  fill: $color-pink;
+}
+
 .page-header__img-btn-close {
   width: 24px;
   height: 24px;
@@ -366,7 +370,7 @@
 
   .page-header__inner {
     position: static;
-    margin-right: 158px;
+    margin-right: 157px;
     min-height: auto;
     padding: 0;
   }
@@ -374,7 +378,6 @@
   .page-header__wrapper {
     display: flex;
     padding-top: 20px;
-    padding-left: 9px;
     padding-bottom: 25px;
     align-items: center;
     width: 940px;

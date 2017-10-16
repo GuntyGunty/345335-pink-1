@@ -141,12 +141,6 @@
   color: $color-deepblue-dark;
 }
 
-.photo__like-block {
-  display: flex;
-  align-items: center;
-  width: 243px;
-}
-
 .photo__like {
   width: 22px;
   height: 20px;
@@ -282,11 +276,6 @@
     }
   }
 
-  .photo__like-block--wide .photo__count {
-    padding-top: 2px;
-    margin-left: 99px;
-  }
-
   .photo__like {
     width: 20px;
     height: 18px;
@@ -407,24 +396,10 @@
     order: 3;
   }
 
-  .photo__like-block {
-    display: block;
-    width: 242px;
-
-    &--wide {
-      width: 243px;
-    }
-  }
-
   .photo__count--wide {
     text-align: right;
     padding-left: 0;
     min-width: 695px;
-    padding-top: 0;
-  }
-
-  .photo__like-block--wide .photo__count {
-    margin-left: 120px;
     padding-top: 0;
   }
 

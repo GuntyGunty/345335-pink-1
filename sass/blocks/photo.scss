@@ -1,16 +1,3 @@
-.photo__inner {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-width: $mobile-width;
-  padding-top: 0;
-  padding-right: 20px;
-  padding-bottom: 0;
-  padding-left: 20px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
 .photo {
   display: flex;
   position: relative;
@@ -101,14 +88,14 @@
 
 .photo__wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   max-width: 280px;
+  align-items: left;
   padding-top: 18px;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding-right: 22px;
   padding-bottom: 20px;
   padding-left: 18px;
-  margin: 0 auto;
   box-sizing: border-box;
   flex-grow: 1;
   background-color: $color-smokewhite-lighter;
@@ -147,7 +134,7 @@
 }
 
 .photo__text {
-  max-width: 246px;
+  min-width: 250px;
   margin-bottom: 10px;
   margin-top: 0;
   line-height: 24px;
@@ -163,10 +150,11 @@
 .photo__like {
   width: 17px;
   height: 17px;
-  padding-top: 0;
+  padding-top: 5px;
   font-size: 0;
   outline: none;
   border: none;
+  margin-right: 20px;
   margin-left: -6px;
   background-color: transparent;
   background-position: center;
@@ -176,7 +164,6 @@
 }
 
 .photo__count {
-  margin-left: 20px;
   font-size: $font-size-extrasmall;
   line-height: 24px;
   text-transform: uppercase;
@@ -213,19 +200,6 @@
 }
 
 @media (min-width: $tablet-widths) {
-  .photo__inner {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 660px;
-    padding-top: 0;
-    padding-right: 20px;
-    padding-bottom: 0;
-    padding-left: 20px;
-    margin-top: 50px;
-  }
-
   .photo__label-block {
     top: 57px;
     right: 20px;
@@ -296,22 +270,12 @@
   }
 
   .photo__text {
-    margin-bottom: auto;
+    margin-bottom: 36px;
 
     &--wide {
       max-width: 620px;
       margin-top: -2px;
       order: 3;
-    }
-  }
-
-  .photo__like-block {
-    justify-content: space-between;
-    width: 239px;
-
-    &--wide {
-      width: 220px;
-      order: 1;
     }
   }
 
@@ -327,12 +291,33 @@
     margin-bottom: 3px;
   }
 
-  .photo__count {
+  .photo__like--wide {
+    margin-top: 3px;
+    margin-right: 0;
+    margin-left: 0;
+    order: -1;
+  }
+
+  .photo__like--wide .photo__icon {
     margin-left: 0;
   }
 
+
+  .photo__count {
+    min-width: 209px;
+    margin-left: 0;
+  }
+
+  .photo__count--wide {
+    min-width: auto;
+    margin-left: 0;
+    padding-top: 2px;
+    padding-left: 290px;
+  }
+
   .photo__icon {
-    margin-left: 6px;
+    margin-left: 19px;
+    margin-top: 3px;
   }
 
   .photo__like-block--wide .photo__icon {
@@ -341,16 +326,6 @@
 }
 
 @media (min-width: $desktop-widths) {
-  .photo__inner {
-    max-width: 960px;
-    padding-top: 0;
-    padding-right: 10px;
-    padding-bottom: 0;
-    padding-left: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .photo {
     width: 300px;
     margin-bottom: 50px;
@@ -395,7 +370,7 @@
 
   .photo__wrapper {
     padding-top: 24px;
-    padding-right: 0;
+    padding-right: 27px;
     padding-bottom: 22px;
     padding-left: 27px;
 
@@ -426,6 +401,11 @@
     }
   }
 
+  .photo__count--wide {
+    padding-left: 620px;
+    padding-top: 0;
+  }
+
   .photo__like-block--wide .photo__count {
     margin-left: 120px;
     padding-top: 0;
@@ -433,13 +413,18 @@
 
   .photo__like {
     padding: 0;
+    margin-right: 0;
+    margin-left: 16px;
+    padding-top: 2px;
+  }
+
+  .photo__like--wide .photo__icon {
+    margin-top: 0;
+    margin-bottom: 3px;
+    margin-right: 2px;
   }
 
   .photo__icon {
     margin-left: 0;
-  }
-
-  .photo__like-block--wide .photo__like {
-    margin-left: 11px;
   }
 }

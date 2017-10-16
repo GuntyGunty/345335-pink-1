@@ -9,9 +9,8 @@
 
 .field-action__btn {
   padding-top: 17px;
-  padding-right: 49px;
+  width: 280px;
   padding-bottom: 17px;
-  padding-left: 47px;
   font-size: $font-size-small;
   font-weight: 600;
   transition: all 0.25s;
@@ -62,8 +61,7 @@
   }
 
   .field-action__btn {
-    padding-right: 60px;
-    padding-left: 56px;
+    width: 299px;
     margin: 0;
   }
 

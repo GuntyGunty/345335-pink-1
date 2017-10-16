@@ -44,7 +44,14 @@
 
   &--photo {
     width: 240px;
-    padding-top: 0;
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+
+  &--form {
+    width: 240px;
+    padding-top: 28px;
+    padding-bottom: 50px;
   }
 }
 
@@ -68,14 +75,13 @@
     font-size: $font-size-bigger;
     font-weight: 300;
     line-height: $font-size-extrabig;
-    padding-bottom: 50px;
+    // margin-top: 35px;
   }
 
   &--form {
-    width: 289px;
     font-size: $font-size-bigger;
     font-weight: 100;
-    padding-bottom: 23px;
+    // padding-bottom: 23px;
     line-height: 1.25em;
   }
 }
@@ -117,6 +123,7 @@
   .banner__index {
     background-position: center 109px,
       center top -68px;
+    padding-bottom: 20px;
   }
 }
 
@@ -139,15 +146,16 @@
     background-image: none, url("../img/bg-back-tablet@1x.jpg");
     background-position: center top -110px;
     background-size: 1193px 729px;
-    padding-top: 55px;
+    padding-top: 0;
+    padding-bottom: 56px;
     min-height: 273px;
   }
 
   .banner__index {
     padding-top: 80px;
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
-    background-position: center bottom, center top -113px;
-    background-size: 700px, 1204px 734px;
+    background-position: center bottom, center top -110px;
+    background-size: 700px, 1204px 730px;
     min-height: 440px;
   }
 
@@ -156,6 +164,15 @@
     padding-right: 2px;
 
     &--photo {
+      padding-top: 60px;
+      padding-right: 2px;
+      padding-bottom: 73px;
+      width: auto;
+    }
+
+    &--form {
+      padding-top: 63px;
+      padding-bottom: 74px;
       width: auto;
     }
   }
@@ -170,12 +187,11 @@
     font-weight: 300;
 
     &--photo {
-      padding-bottom: 125px;
+      width: 500px;
     }
 
     &--form {
       width: 500px;
-      margin-bottom: 15px;
     }
   }
 }
@@ -198,6 +214,11 @@
     padding-right: 360px;
     padding-bottom: 0;
     padding-left: 0;
+
+    &--form {
+      padding-right: 3px;
+      padding-bottom: 0;
+    }
   }
 
   .banner__inner--photo {
@@ -214,6 +235,10 @@
     min-height: 340px;
   }
 
+  .banner__photo-page {
+    padding-bottom: 0;
+  }
+
   .banner__title {
     width: 800px;
     font-size: $font-size-hugest;
@@ -221,13 +246,15 @@
     background: none;
 
     &--photo {
+      margin-top: 84px;
       width: 600px;
-      padding-bottom: 15px;
+      padding-bottom: 100px;
     }
 
     &--form {
-      padding-top: 21px;
-      margin: 0;
+      margin-top: 80px;
+      padding-bottom: 80px;
+      padding-top: 0;
     }
   }
 }

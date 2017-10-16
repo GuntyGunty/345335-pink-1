@@ -72,8 +72,7 @@
 
 .fields-text__input {
   width: 280px;
-  padding-top: 16px;
-  padding-bottom: 14px;
+  height: 64px;
   padding-left: 20px;
   outline: 0;
   font-size: $font-size-small;
@@ -97,6 +96,7 @@
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
+    padding-top: 15px;
     color: $color-black;
   }
 
@@ -105,6 +105,7 @@
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
+    padding-top: 15px;
     color: $color-black;
   }
 
@@ -112,6 +113,7 @@
     font-size: $font-size-small;
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
+    padding-top: 15px;
     line-height: 30px;
     color: $color-black;
   }
@@ -285,11 +287,13 @@
     &--phone {
       background-image: url("../img/icon-phone.svg");
       background-position-x: 19px;
+      background-size: 20px;
     }
 
     &--email {
       background-image: url("../img/icon-mail.svg");
       background-position-x: 19px;
+      background-size: 20px;
     }
   }
 
@@ -314,7 +318,7 @@
 
   .fields-text__item--contacts:nth-child(2) .fields-text__input--contacts {
     padding-left: 18px;
-    padding-top: 15px;
+    padding-top: 0;
   }
 
   .fields-text__item:nth-child(3) .fields-text__title {
@@ -327,9 +331,7 @@
   .fields-text__input {
     width: auto;
     flex-grow: 1;
-    padding-top: 16px;
     padding-right: 20px;
-    padding-bottom: 14px;
     padding-left: 19px;
 
     &--contacts {
@@ -362,28 +364,31 @@
 @media (min-width: $desktop-widths) {
   .fields-text {
     align-items: flex-end;
-    max-width: 940px;
     padding: 0;
 
     &:first-child {
       align-items: center;
-      width: 470px;
+      max-width: 435px;
     }
   }
 
   .fields-text__items {
-    width: 470px;
+    max-width: 435px;
     margin: 0;
     padding-top: 18px;
-    padding-right: 37px;
 
     &--review {
       min-width: 940px;
-      padding-top: 32px;
+      padding-top: 33px;
       padding-right: 0;
       padding-bottom: 45px;
       padding-left: 0;
     }
+  }
+
+  .fields-text__item--contacts:nth-child(2) .fields-text__input--contacts {
+    padding-top: 12px;
+    padding-left: 20px;
   }
 
   .fields-text__items--contacts {
@@ -411,7 +416,7 @@
 
     &--review {
       padding-left: 33px;
-      margin-top: -40px;
+      margin-top: -42px;
       margin-bottom: 33px;
       padding-right: 33px;
     }
@@ -422,10 +427,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 824px;
-  }
-
-  .fields-text__title {
-    margin-left: -2px;
   }
 
   .fields-text__item {
@@ -449,6 +450,7 @@
 
     &--review {
       width: 940px;
+
     }
   }
 
@@ -482,13 +484,18 @@
     height: 62px;
     min-width: 60px;
 
-    &--mail {
+    &--email {
       height: 63px;
+      background-position-x: 18px;
+      background-position-y: 23px;
+      background-size: 20px;
     }
 
     &--phone {
       height: 63px;
-      background-position-x: 18px;
+      background-size: 20px 20px;
+      background-position-x: 17px;
+      background-position-y: 20px;
     }
   }
 

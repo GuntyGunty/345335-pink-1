@@ -190,9 +190,9 @@
     margin-bottom: 52px;
   }
 
-  .contacts__link--mail {
+  .contacts__item-name--mail {
     margin-bottom: 4px;
-    text-decoration: none;
+    // text-decoration: none;
   }
 
   .contacts__link--adress {
@@ -275,6 +275,10 @@
 
   .contacts__item-name {
     margin-bottom: 21px;
+  }
+
+  .contacts__item-name--mail {
+    margin-left: 20px;
   }
 
   .contacts__link {

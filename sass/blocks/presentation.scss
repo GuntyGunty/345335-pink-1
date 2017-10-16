@@ -190,7 +190,7 @@
   padding-top: 16px;
   padding-right: 93px;
   padding-bottom: 16px;
-  padding-left: 85px;
+  padding-left: 87px;
   transition: all 0.25s;
   border: 3px solid $color-pink;
   color: $color-pink;
@@ -204,8 +204,7 @@
   margin-top: 37px;
   margin-right: 0;
   margin-bottom: 11px;
-  padding-right: 86px;
-  letter-spacing: 0.8px;
+  padding-right: 91px;
   margin-left: 0;
   border-radius: 25px;
 
@@ -261,7 +260,7 @@
     padding-bottom: 40px;
     padding-left: 0;
     margin-bottom: 30px;
-    padding-top: 44px;
+    padding-top: 45px;
   }
 
   .presentation__title {
@@ -387,6 +386,7 @@
   .presentation__btn-container {
     width: 280px;
     padding: 0;
+    margin-top: 60px;
     margin-left: 15px;
   }
 
@@ -477,13 +477,11 @@
   .presentation__btn-reset {
     padding-right: 93px;
     padding-left: 87px;
-    letter-spacing: 0.5px;
   }
 
   .presentation__btn-submit {
     margin-top: auto;
     padding-right: 84px;
-    letter-spacing: 0.9px;
     padding-left: 74px;
   }
 }
@@ -536,7 +534,6 @@
 
   .presentation__list-container {
     width: 600px;
-    margin-bottom: 145px;
   }
 
   .presentation__tool-bar {
@@ -645,13 +642,11 @@
   }
 
   .presentation__btn-submit {
-    letter-spacing: 0.3px;
     margin-right: 40px;
   }
 
   .presentation__btn-reset {
     padding-right: 40px;
-    letter-spacing: 1.2px;
   }
 
   .presentation__btn-container {
@@ -659,5 +654,6 @@
     justify-content: space-around;
     width: 450px;
     padding-left: 63px;
+    margin-top: 145px;
   }
 }

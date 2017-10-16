@@ -23,9 +23,9 @@ var nodeResolve = require('rollup-plugin-node-resolve');
 var commonJS = require('rollup-plugin-commonjs');
 var polyfill = require('babel-polyfill');
 
-gulp.task("clean", function() {
-  return del("build");
-});
+// gulp.task("clean", function() {
+//   return del("build");
+// });
 
 gulp.task("copy", function() {
   return gulp.src([
@@ -128,7 +128,7 @@ gulp.task('js-watch', ['scripts'], function (done) {
 
 gulp.task("build", function(fn) {
     run(
-      "clean",
+      // "clean",
       "copy",
       "style",
       "scripts",

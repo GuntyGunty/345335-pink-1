@@ -148,14 +148,15 @@
 }
 
 .photo__like {
-  width: 17px;
-  height: 17px;
+  width: 22px;
+  height: 20px;
+  padding-left: 0;
   padding-top: 5px;
   font-size: 0;
   outline: none;
   border: none;
-  margin-right: 20px;
-  margin-left: -6px;
+  margin-right: 13px;
+  margin-left: -4px;
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
@@ -171,8 +172,10 @@
 }
 
 .photo__icon {
+  width: 22px;
   fill: $color-pink;
   transition: all 0.25s;
+  z-index: 10;
 
   &:focus {
     outline: none;
@@ -285,43 +288,43 @@
   }
 
   .photo__like {
+    width: 20px;
+    height: 18px;
     padding: 0;
     margin-left: 0;
+    margin-right: 0;
     order: 2;
     margin-bottom: 3px;
   }
 
   .photo__like--wide {
-    margin-top: 3px;
+    width: 20px;
+    height: 18px;
+    margin-top: 2px;
     margin-right: 0;
     margin-left: 0;
     order: -1;
   }
 
   .photo__like--wide .photo__icon {
-    margin-left: 0;
+    margin-left: 1px;
   }
 
 
   .photo__count {
-    min-width: 209px;
+    min-width: 225px;
     margin-left: 0;
   }
 
   .photo__count--wide {
     min-width: auto;
     margin-left: 0;
-    padding-top: 2px;
-    padding-left: 290px;
+    padding-left: 293px;
   }
 
   .photo__icon {
-    margin-left: 19px;
+    width: 20px;
     margin-top: 3px;
-  }
-
-  .photo__like-block--wide .photo__icon {
-    margin-left: 0;
   }
 }
 
@@ -341,12 +344,17 @@
   }
 
   .photo__label-block {
-    top: 55px;
-    right: 10px;
+    top: 54px;
+    right: 11px;
   }
 
   .photo__link {
     height: 400px;
+  }
+
+  .photo__name-text {
+    display: block;
+    order: 1;
   }
 
   .photo__img,
@@ -361,6 +369,13 @@
       background-position-x: -121px;
       background-image: url("../img/panorama-desktop@1x.jpg");
     }
+  }
+
+  .photo__count {
+    display: block;
+    min-width: 224px;
+    text-align: left;
+    margin-left: 0;
   }
 
   .photo__label-text {
@@ -378,10 +393,9 @@
       width: 940px;
       max-width: 940px;
       min-height: 95px;
-      padding-top: 25px;
+      padding-top: 23px;
       padding-right: 30px;
       padding-bottom: 14px;
-      padding-left: 27px;
       margin: 0 auto;
     }
   }
@@ -394,6 +408,7 @@
   }
 
   .photo__like-block {
+    display: block;
     width: 242px;
 
     &--wide {
@@ -402,7 +417,9 @@
   }
 
   .photo__count--wide {
-    padding-left: 620px;
+    text-align: right;
+    padding-left: 0;
+    min-width: 695px;
     padding-top: 0;
   }
 
@@ -412,10 +429,11 @@
   }
 
   .photo__like {
+    display: block;
+    height: 19px;
     padding: 0;
     margin-right: 0;
-    margin-left: 16px;
-    padding-top: 2px;
+    padding-top: 3px;
   }
 
   .photo__like--wide .photo__icon {
@@ -426,5 +444,6 @@
 
   .photo__icon {
     margin-left: 0;
+    margin-top: 0;
   }
 }

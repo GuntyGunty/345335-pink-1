@@ -1,32 +1,3 @@
-// .packets__wrapper {
-//   position: relative;
-//   background-color: $color-smokewhite-lighter;
-//   width: 100%;
-//   max-height: 430px;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: -40px;
-//     width: 100%;
-//     height: 60px;
-//     background-color: $color-smokewhite-lighter;
-//     background-image: url("../img/bg-triangle-white.svg");
-//     background-repeat: no-repeat;
-//     background-size: 110%;
-//     background-position: center -1px;
-//   }
-// }
-
-// .packets {
-//   max-width: $mobile-width;
-//   padding-top: 85px;
-//   padding-right: 0;
-//   padding-bottom: 48px;
-//   padding-left: 0;
-//   margin: 0 auto;
-// }
-
 .packets__wrapper {
   max-width: $mobile-width;
   padding-top: 85px;
@@ -175,32 +146,6 @@
 }
 
 @media (min-width: $tablet-widths) {
-  // .packets {
-  //   max-width: $tablet-widths;
-  //   padding: 0;
-  //   margin: 0 auto;
-  // }
-
-  // .packets__wrapper {
-  //   position: relative;
-  //   background-color: $color-smokewhite-lighter;
-  //   width: 660px;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   max-height: 630px;
-
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     top: -4px;
-  //     background-color: $color-smokewhite-lighter;
-  //     background-image: url("../img/bg-triangle-white.svg");
-  //     background-repeat: no-repeat;
-  //     background-position: center 0;
-  //     width: 100%;
-  //   }
-  // }
-
   .packets {
     position: relative;
     background-color: $color-smokewhite-lighter;
@@ -322,34 +267,6 @@
 }
 
 @media (min-width: $desktop-widths) {
-  // .packets {
-  //   max-width: $desktop-widths;
-  // }
-
-  // .packets__wrapper {
-  //   position: relative;
-  //   background-color: $color-smokewhite-lighter;
-  //   width: 960px;
-  //   margin: 0 auto;
-  //   max-height: 630px;
-  //   background-position: center -1px, left;
-  //   background-size: 100%;
-
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     top: -11px;
-  //     height: 80px;
-  //     background-color: $color-smokewhite-lighter;
-  //     background-image: url("../img/bg-triangle-white.svg");
-  //     background-repeat: no-repeat;
-  //     background-size: cover;
-  //     background-position: center 0;
-  //     transform: translateY(-4px);
-  //     width: 100%;
-  //   }
-  // }
-
   .packets {
     position: relative;
     background-color: $color-smokewhite-lighter;

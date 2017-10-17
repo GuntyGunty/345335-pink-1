@@ -22,6 +22,7 @@
 
 .fields-radio__legend {
   margin-top: 0;
+  max-width: 300px;
   margin-right: 20px;
   margin-bottom: 15px;
   margin-left: 20px;
@@ -115,6 +116,7 @@
     background-color: $color-white;
     margin-left: auto;
     margin-right: 122px;
+    max-width: 600px;
     margin-bottom: 27px;
     padding: 0 28px;
     margin-top: -43px;

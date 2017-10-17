@@ -84,9 +84,9 @@
     display: block;
     position: absolute;
     font-size: 0;
-    top: 210px;
-    width: 22px;
-    height: 42px;
+    top: 208px;
+    width: 30px;
+    height: 49px;
     opacity: 0.3;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -96,7 +96,7 @@
     }
 
     &--next {
-      right: 17px;
+      right: 10px;
     }
 
     &:hover {

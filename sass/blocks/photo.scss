@@ -14,14 +14,17 @@
 }
 
 .photo__link {
+  background-color: $color-smokewhite-light;
   width: 280px;
   height: 180px;
 }
 
-.photo__img,
-.photo__link {
-  width: 280px;
-  height: 180px;
+.photo__link picture {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+  vertical-align: center;
 }
 
 .photo__link--wide {
@@ -213,20 +216,23 @@
     }
   }
 
+  .photo__link picture {
+    display: flex;
+    width: inherit;
+    height: inherit;
+    align-items: center;
+  }
+
   .photo__link {
+    background-color: $color-smokewhite-light;
     width: 300px;
     height: 300px;
   }
 
-  .photo__img,
-  .photo__link {
-    width: 300px;
-    height: 300px;
-
-    &--wide {
-      width: 660px;
-      height: 508px;
-    }
+  .photo__img--wide,
+  .photo__link--wide {
+    width: 660px;
+    height: 508px;
   }
 
   .photo__link--wide {
@@ -332,12 +338,21 @@
     }
   }
 
+  .photo__link picture {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    justify-content: center;
+  }
+
   .photo__label-block {
     top: 54px;
     right: 11px;
   }
 
   .photo__link {
+    background-color: $color-smokewhite-light;
     height: 400px;
   }
 
@@ -346,18 +361,13 @@
     order: 1;
   }
 
-  .photo__img,
-  .photo__link {
-    height: 400px;
-    width: 300px;
-
-    &--wide {
-      min-width: 960px;
-      height: 506px;
-      background-size: cover;
-      background-position-x: -121px;
-      background-image: url("../img/panorama-desktop@1x.jpg");
-    }
+  .photo__img--wide,
+  .photo__link--wide {
+    min-width: 960px;
+    height: 506px;
+    background-size: cover;
+    background-position-x: -121px;
+    background-image: url("../img/panorama-desktop@1x.jpg");
   }
 
   .photo__count {

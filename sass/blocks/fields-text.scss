@@ -74,7 +74,7 @@
   width: 280px;
   height: 64px;
   padding-top: 15px;
-  padding-bottom: 14px;
+  padding-bottom: 15px;
   padding-left: 20px;
   outline: 0;
   font-size: $font-size-small;
@@ -379,6 +379,7 @@
   .fields-text__items {
     max-width: 435px;
     margin: 0;
+    padding-right: 2px;
     padding-top: 18px;
 
     &--review {
@@ -489,7 +490,7 @@
 
     &--email {
       height: 63px;
-      background-position-x: 18px;
+      background-position-x: 19px;
       background-position-y: 23px;
       background-size: 20px;
     }
@@ -504,6 +505,8 @@
 
   .fields-text__textarea {
     width: 820px;
+    padding-top: 15px;
+    padding-left: 18px;
     min-height: 128px;
   }
 }

@@ -34,7 +34,7 @@
 
 .presentation__link-img,
 .presentation__img {
-  width: 280px;
+  min-width: 280px;
   height: 374px;
   margin: 0 auto;
   padding-top: 0;
@@ -42,6 +42,10 @@
   padding-right: 10px;
   padding-left: 9px;
 }
+
+// .presentation__img {
+//   min-width: auto;
+// }
 
 .presentation__list {
   width: 240px;
@@ -318,7 +322,7 @@
 
   .presentation__tool-bar {
     display: block;
-    width: 200px;
+    width: 202px;
 
     &--active {
       display: block;
@@ -436,7 +440,7 @@
     &--contrast {
       width: 17px;
       height: 17px;
-      margin-right: 32px;
+      margin-right: 30px;
       margin-left: 10px;
     }
   }

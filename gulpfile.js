@@ -27,6 +27,7 @@ gulp.task("copy", function() {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
     "js/google-map.js",
+    "js/picturefill.js",
     "img/*",
     "*.html"
   ], {

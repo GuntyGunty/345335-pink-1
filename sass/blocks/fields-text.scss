@@ -73,6 +73,8 @@
 .fields-text__input {
   width: 280px;
   height: 64px;
+  padding-top: 15px;
+  padding-bottom: 14px;
   padding-left: 20px;
   outline: 0;
   font-size: $font-size-small;
@@ -87,6 +89,7 @@
     font-size: $font-size-small;
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
+    height: 64px;
     line-height: 30px;
     color: $color-black;
   }
@@ -96,6 +99,7 @@
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     line-height: 30px;
+    height: 64px;
     padding-top: 15px;
     color: $color-black;
   }
@@ -114,6 +118,7 @@
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 400;
     padding-top: 15px;
+    height: 64px;
     line-height: 30px;
     color: $color-black;
   }
@@ -195,7 +200,6 @@
     color: $color-black;
   }
 }
-
 
 @media (min-width: $tablet-widths) {
   .fields-text {
@@ -318,7 +322,7 @@
 
   .fields-text__item--contacts:nth-child(2) .fields-text__input--contacts {
     padding-left: 18px;
-    padding-top: 0;
+    padding-top: 13px;
   }
 
   .fields-text__item:nth-child(3) .fields-text__title {
@@ -450,7 +454,6 @@
 
     &--review {
       width: 940px;
-
     }
   }
 
@@ -470,7 +473,7 @@
   }
 
   .fields-text__input {
-    padding-left: 21px;
+    padding-left: 19px;
 
     &--contacts {
       padding-left: 18px;
@@ -498,7 +501,6 @@
       background-position-y: 20px;
     }
   }
-
 
   .fields-text__textarea {
     width: 820px;
